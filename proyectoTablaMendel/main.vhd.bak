@@ -1,0 +1,126 @@
+-----------------------------
+--Actividad: Tabla de Mendel (MAIN)
+--Autor(as): Laura Arango,Andres Salazar, Tania Obando, Verónica Tofiño.
+--Fecha:15/11/2018
+--Curso:Arquitectura del computador II
+--
+--archivo: TablaMendel.vhd
+-----------------------------
+--Descripcion: Se diseñó el main donde se hace el port map de todos los componentes.
+-----------------------------
+--Cambios: Se añadió esta entrada.
+-----------------------------
+
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity main is 
+generic (
+	BusDatos:natural:=8; -- Ancho de bloque
+	BusRegister:natural:=4 -- Largo de memoria
+);
+
+port (
+	Clock: in std_logic;
+	direccionRd: in std_logic_vector (4 downto 0);
+	direccionRs: in std_logic_vector (4 downto 0);
+	DatoRF: in std_logic_vector (8 downto 0);
+	dataOutA: out std_logic_vector (8 downto 0);
+	dataOutB: out std_logic_vector (8 downto 0);
+	cajaA: out std_logic_vector (8 downto 0);
+	cajaB: out std_logic_vector (8 downto 0);
+	signalWrite: in std_logic
+);
+end entity;
+
+architecture main_arch of main is
+component RF is
+generic(
+	BusE:natural:=8; -- Ancho de bloque
+	BusRF:natural:=4 -- Largo de memoria
+	);
+	
+	port (
+		RdD: in std_logic_vector(BusRF downto 0); -- Registro RD
+		RsD: in std_logic_vector(BusRF downto 0); -- Registro RS
+		Clk: in std_logic; --Clock del sistema
+		DataToSave: in std_logic_vector(BusE downto 0); --Dato a guardar en el RF
+		DataOutA: out unsigned (BusE downto 0); --Dato de salida A Rs
+		DataOutB: out unsigned (BusE downto 0); -- Dato de salida B Rd
+		RegWrite: in std_logic;	--Señal de escritura en RF
+		--DatoAf : out std_logic_vector (4 downto 0)
+
+	);
+end component;
+
+component boxA is
+	generic(
+		NA: natural := 8 --Bus de datos
+	);
+
+	port( 
+		clk : in std_logic;
+		RsData: in unsigned(NA downto 0); --Dato Rs del RF
+		ExitA: out std_logic_Vector(NA downto 0) --Salida del Rs
+	);
+end component;
+
+component BoxB is
+	generic(
+		NB: natural := 8 --Bus de datos
+	);
+
+	port( 
+		clk : in std_logic;
+		RdData: in unsigned(NB downto 0); --Dato Rd del RF
+		ExitB: out std_logic_vector(NB downto 0) -- Salida del Tmp
+	);
+end component;
+
+
+signal DatoRs: std_logic_vector (8 downto 0);
+signal DatoRd: std_logic_vector (8 downto 0);
+signal exA: std_logic_vector (8 downto 0);
+signal exB: std_logic_vector (8 downto 0);
+begin
+
+MapRF: RF generic map (
+	BusRF => BusDatos,
+	BusE => BusRegister
+	)
+	port map (
+		RdD => direccionRd,
+		RsD => direccionRs,
+		Clk => clk,
+		DataToSave => datoRF,
+		DataOutA => DatoRs,
+		DataOutB => DatoRd,
+		RegWrite => signalWrite	
+	);
+
+MapboxA : boxA generic map (
+	NA => BusDatos
+	)
+	port map (
+		clk => Clock,
+		RsData => DatoRs,
+		ExitA => exA
+	);
+
+MapboxB : boxB generic map (
+	NB => BusDatos
+	)
+	port map (
+		clk => Clock,
+		RdData => DatoRd,
+		ExitB => exB
+	);
+
+	dataOutA <= DatoRs;
+	dataOutB <= DatoRd;
+	cajaA <= exA;
+	cajaB <= exB;
+	
+

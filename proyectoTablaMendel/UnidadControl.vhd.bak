@@ -1,0 +1,438 @@
+-----------------------------
+--Actividad: Unidad de Control
+--Autor(as): Laura Arango,Andres Salazar, Tania Obando, Verónica Tofiño.
+--Fecha:15/11/2018
+--Curso:Arquitectura del computador II
+--
+--archivo: UnidadControl.vhd
+-----------------------------
+--Descripcion: Se diseñó la máquina de estados que ejecturá la arquitectura, junto con las señales que la Unidad de Control le va a mandar a cada uno de los componentes.
+-----------------------------
+--Cambios: 
+--Se añadió esta entrada.
+--Se añadieron dos ciclos más uno para esperar a que la ROM entregue un dato y uno para esperar a que la RAM entregue un dato.
+--Se añadió un estado bandera que para el sistema hasta que el usuario meta los datos.
+-----------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity UnidadControl is
+port ( 
+		Clk: in std_logic; --Clock del sistema
+		Rst: in std_logic; --Botón de Reset para reiniciar el sistema
+		Opcode: in std_logic_vector(2 downto 0); --Opcode de las instrucciones 
+		PCWrite,PCSource: out std_logic; -- Señales del PC
+		IRWrite: out std_logic; --Señal del IR
+		MemIRead,MemRead,MemWrite,MemSource,MemtoReg,RegWrite: out std_logic; --Señales de la memoria y los multiplexores relacionados con Memoria
+		AluSrcB,Jst,Jeq: out std_logic; --Señal del multiplexor de registro y de las señales de salto
+		Aluop : out std_logic_vector(1 downto 0); --AluOp para realizar las operaciones (sumar, mayor que, igual que)
+		InS,OutS: out std_logic; --Señales de entradas y salidas
+		pulsador: in std_logic;
+		led2: out std_logic;
+		led3: out std_logic;
+		estadoActual : out std_logic_vector(3 downto 0);
+		enAlu: out std_logic
+);     
+ end entity;  
+
+architecture UnidadControl_arch of UnidadControl is
+	signal EstadoAc, EstadoSig: std_logic_vector(3 downto 0); --Estado Actual y Siguiente de la maquina de estados
+	begin
+	process (Rst,Clk) is
+	begin
+		estadoActual <= EstadoAc;
+		if rising_edge(Clk) then
+			EstadoAc <= EstadoSig;
+		end if;
+		if Rst='0' then
+				EstadoAc<="1111";
+				led3 <= '1';
+		else 
+			led3 <= '0';
+		end if;
+	end process;
+	
+	process (EstadoAc, pulsador,opcode) is
+	begin 
+		case EstadoAc is
+			when "1111" => --algo
+				EstadoSig <= "0000"; 
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '0';
+				irWrite <= '0';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+				enAlu <= '0';
+			when "0000" => --fetch
+				EstadoSig <= "0001"; --wait
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '0';
+				irWrite <= '0';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+			when "0001" => --wait
+				EstadoSig <= "0010"; 
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '0';
+				irWrite <= '1';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+				enAlu <= '0';
+			when "0010" => --decode
+				PCWrite <= '1';
+				PCSource <= '0';
+				--MemIRead <= '1';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '0';
+				irWrite <= '0';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+				if (opcode = "000") then
+					EstadoSig <= "0011"; --ExAC
+				elsif (opcode = "101") then
+					EstadoSig <= "0101"; -- JstC
+				elsif (opcode = "100") then
+					EstadoSig <= "0110"; -- JeqC
+				elsif (opcode = "011" or opcode = "111") then
+					EstadoSig <= "0111"; --ExLo
+				elsif (opcode = "010") then 
+					EstadoSig <= "1011"; --SmC
+				elsif (opcode = "110") then
+					EstadoSig <= "1101"; --Esperar el IN
+				end if;
+		
+			when "0011" => --ExAc
+				--if (opcode = "000") then 
+					EstadoSig <= "0100";
+					PCWrite <= '0';
+					PCSource <= '0';
+					MemIRead <= '0';
+					MemRead <= '0';
+					MemSource <= '0';
+					MemWrite <= '0';
+					MemtoReg <= '0';
+					irWrite <= '0';
+					RegWrite <= '0';
+					InS <= '0';
+					OutS <= '0';
+					Jst <= '0';
+					Jeq <= '0';
+					AluOp <= "00";
+					AluSrcB <= '1';
+					led2 <= '0';
+					enAlu <= '1';
+				--else	
+				--	EstadoSig <= "0000";
+				--end if;
+			when "0100" => --AcC
+				EstadoSig <= "1110";
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '1';
+				irWrite <= '0';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+				enAlu <= '0';
+			when "1110" =>
+				EstadoSig <= "0000";
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '1';
+				irWrite <= '0';
+				RegWrite <= '1';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+				enAlu <= '0';
+			when "0101" => --JstC
+				--if (opcode = "101") then 
+					EstadoSig <= "0000";
+					PCWrite <= '1';
+					PCSource <= '1';
+					MemIRead <= '0';
+					MemRead <= '0';
+					MemSource <= '0';
+					MemWrite <= '0';
+					MemtoReg <= '0';
+					irWrite <= '0';
+					RegWrite <= '0';
+					InS <= '0';
+					OutS <= '0';
+					Jst <= '1';
+					Jeq <= '0';
+					AluOp <= "10";
+					AluSrcB <= '0';
+					led2 <= '0';
+					enAlu <= '0';
+				--else
+				--	EstadoSig <= "0000";
+				--end if;
+			when "0110" => --JeqC
+				--if (opcode = "100") then 
+					EstadoSig <= "0000";
+					PCWrite <= '0';
+					PCSource <= '0';
+					MemIRead <= '0';
+					MemRead <= '0';
+					MemSource <= '0';
+					MemWrite <= '0';
+					MemtoReg <= '0';
+					irWrite <= '0';
+					RegWrite <= '0';
+					InS <= '0';
+					OutS <= '0';
+					Jst <= '0';
+					Jeq <= '1';
+					AluOp <= "01";
+					AluSrcB <= '0';
+					led2 <= '0';
+					enAlu <= '0';
+				--else
+				--	estadoSig <= "0000";
+				--end if;
+			when "0111" => --ExLo
+				--if (opcode = "011" or opcode = "111") then 
+					EstadoSig <= "1000";
+					PCWrite <= '0';
+					PCSource <= '0';
+					MemIRead <= '0';
+					MemRead <= '1';
+					MemSource <= '0';
+					MemWrite <= '0';
+					MemtoReg <= '0';
+					irWrite <= '0';
+					RegWrite <= '0';
+					InS <= '0';
+					OutS <= '0';
+					Jst <= '0';
+					Jeq <= '0';
+					AluOp <= "00";
+					AluSrcB <= '1';
+					led2 <= '0';
+					enAlu <= '0';
+				--else
+				--	EstadoSig <= "0000";
+				--end if;
+			when "1000" => --waitMem
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '0';
+				irWrite <= '0';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+				enAlu <= '0';
+				if (opcode = "111") then
+					EstadoSig <= "1010";
+				elsif (opcode = "011") then
+					EstadoSig <= "1001";
+				else 
+					EstadoSig <= "0000";
+				end if;
+			when "1010" => --OutC
+					--if (opcode = "111") then 
+						EstadoSig <= "0000";
+						PCWrite <= '0';
+						PCSource <= '0';
+						MemIRead <= '0';
+						MemRead <= '0';
+						MemSource <= '0';
+						MemWrite <= '0';
+						MemtoReg <= '0';
+						irWrite <= '0';
+						RegWrite <= '0';
+						InS <= '0';
+						OutS <= '1';
+						Jst <= '0';
+						Jeq <= '0';
+						AluOp <= "00";
+						AluSrcB <= '0';
+						led2 <= '0';
+						enAlu <= '0';
+					--else 
+					--	EstadoSig <= "0000";
+					--end if;
+			when "1001" => --LmC
+				--if (opcode = "011") then 
+					EstadoSig <= "0000";
+					PCWrite <= '1';
+					PCSource <= '0';
+					MemIRead <= '0';
+					MemRead <= '0';
+					MemSource <= '0';
+					MemWrite <= '0';
+					MemtoReg <= '0';
+					irWrite <= '0';
+					RegWrite <= '0';
+					InS <= '0';
+					OutS <= '0';
+					Jst <= '0';
+					Jeq <= '0';
+					AluOp <= "00";
+					AluSrcB <= '0';
+					led2 <= '0';
+					enAlu <= '0';
+				--else 
+				--	EstadoSig <= "0000";
+				--end if;
+			when "1011" => --SmC
+				--if (opcode = "010") then 
+					EstadoSig <= "0000";
+					PCWrite <= '0';
+					PCSource <= '0';
+					MemIRead <= '0';
+					MemRead <= '0';
+					MemSource <= '1';
+					MemWrite <= '1';
+					MemtoReg <= '0';
+					irWrite <= '0';
+					RegWrite <= '0';
+					InS <= '0';
+					OutS <= '0';
+					Jst <= '0';
+					Jeq <= '0';
+					AluOp <= "00";
+					AluSrcB <= '1';
+					led2 <= '0';
+					enAlu <= '0';
+				--else 
+				--	EstadoSig <= "0000";
+				--end if;
+			when "1101" => --waitIn
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '1';
+				MemtoReg <= '0';
+				irWrite <= '0';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '1';
+				enAlu <= '0';
+				if (pulsador = '0') then 
+					EstadoSig <= "1100";
+				else 
+					EstadoSig <= "1101";
+				end if;
+			when "1100" => --In
+				--if (opcode = "110") then 
+					EstadoSig <= "0000";
+					PCWrite <= '0';
+					PCSource <= '0';
+					MemIRead <= '0';
+					MemRead <= '0';
+					MemSource <= '0';
+					MemWrite <= '1';
+					MemtoReg <= '0';
+					irWrite <= '0';
+					RegWrite <= '0';
+					InS <= '1';
+					OutS <= '0';
+					Jst <= '0';
+					Jeq <= '0';
+					AluOp <= "00";
+					AluSrcB <= '1';
+					led2 <= '0';
+					enAlu <= '0';
+				--else
+				--	EstadoSig <= "0000";
+				--end if;
+			when others =>
+				EstadoSig <= "0000";
+				PCWrite <= '0';
+				PCSource <= '0';
+				MemIRead <= '0';
+				MemRead <= '0';
+				MemSource <= '0';
+				MemWrite <= '0';
+				MemtoReg <= '0';
+				irWrite <= '0';
+				RegWrite <= '0';
+				InS <= '0';
+				OutS <= '0';
+				Jst <= '0';
+				Jeq <= '0';
+				AluOp <= "00";
+				AluSrcB <= '0';
+				led2 <= '0';
+				enAlu <= '0';
+			end case;
+	end process;	
+ 
+end architecture; 

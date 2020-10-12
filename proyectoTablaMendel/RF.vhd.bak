@@ -1,0 +1,98 @@
+-----------------------------
+--Actividad: Register File
+--Autor(as): Laura Arango,Andres Salazar, Tania Obando, Verónica Tofiño.
+--Fecha:15/11/2018
+--Curso:Arquitectura del computador II
+--
+--archivo: RF.vhd
+-----------------------------
+--Descripcion: Componente que guarda datos.
+-----------------------------
+--Cambios: Se añadió esta entrada.
+-----------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+entity RF is
+generic(
+	BusE:natural:=8; -- Ancho de bloque
+	BusRF:natural:=4 -- Largo de memoria
+	);
+	
+	port (
+		RdD: in std_logic_vector(BusRF downto 0); -- Registro RD
+		RsD: in std_logic_vector(BusRF downto 0); -- Registro RS
+		Clk: in std_logic; --Clock del sistema
+		DataToSave: in std_logic_vector(BusE downto 0); --Dato a guardar en el RF
+		DataOutA: out std_logic_vector (BusE downto 0); --Dato de salida A Rs
+		DataOutB: out std_logic_vector (BusE downto 0); -- Dato de salida B Rd
+		RegWrite: in std_logic;	--Señal de escritura en RF
+		DatoAf : out std_logic_vector (4 downto 0)
+
+	);
+end entity;
+
+architecture RF_arch of RF is
+		signal tmp1,tmp2 : std_logic_vector(4 downto 0);
+		
+		subtype word_t is std_logic_vector(8 downto 0);
+		type rf_type is array (31 downto 0) of word_t;
+		signal rf: rf_type;
+--		:= (
+--			0	=> "000000000", 
+--			1 	=> "000000000", 
+--			2 	=> "000000000", 
+--			3 	=> "000000000", 
+--			4 	=> "000000100",
+--			5 	=> "000000000",
+--			6 	=> "000000000",
+--			7 	=> "000000000",
+--			8 	=> "000000000",
+--			9 	=> "000000000",
+--			10 => "000000000", 
+--			11	=> "000000000", 
+--			12 => "000000000", 
+--			13	=> "000000000", 
+--			14	=> "000000000",
+--			15	=> "000000000",
+--			16 => "000000000",
+--			17 => "000000000",
+--			18 => "000000000",
+--			19 => "000000000",
+--			20 => "000000000",
+--			21 => "000000000",
+--			22 => "000000000",
+--			23 => "000000000",
+--			24 => "000000000",
+--			25 => "000000000",
+--			26 => "000000000",
+--			27 => "000000000",
+--			28 => "000000000",
+--			29 => "000000000",
+--			30 => "000000000",
+--			31 => "000000000"
+--			
+--		);
+begin
+	tmp1 <= RsD;
+	tmp2 <= RdD;
+OutRf:process (Clk) is
+	begin
+		if (rising_edge(Clk)) then
+			DataOutA<= rf(to_integer(unsigned(tmp1)));
+			DataOutB<= rf(to_integer(unsigned(tmp2)));
+			if (regWrite ='1') then
+				DatoAf <= tmp2;
+				rf(to_integer(unsigned(tmp2)))<= DataToSave;
+				
+				end if;
+
+		end if;
+	end process OutRf;
+		
+--DataOutA <= tmp;
+--DataOutB <= tmp2;
+	
+end architecture;

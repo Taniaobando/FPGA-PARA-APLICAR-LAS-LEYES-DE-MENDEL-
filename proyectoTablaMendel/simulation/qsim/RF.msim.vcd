@@ -1,0 +1,3147 @@
+$comment
+	File created using the following command:
+		vcd file RF.msim.vcd -direction
+$end
+$date
+	Sat Nov 24 11:22:26 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module main_vlg_vec_tst $end
+$var reg 2 ! AluOp [1:0] $end
+$var reg 1 " Clock $end
+$var reg 9 # datoRAM [8:0] $end
+$var reg 22 $ instrROM [21:0] $end
+$var reg 1 % SignalAluSrcB $end
+$var reg 1 & SignalEnAlu $end
+$var reg 1 ' SignalirWrite $end
+$var reg 1 ( SignalMemToReg $end
+$var reg 1 ) signalWrite $end
+$var wire 1 * cajaA [8] $end
+$var wire 1 + cajaA [7] $end
+$var wire 1 , cajaA [6] $end
+$var wire 1 - cajaA [5] $end
+$var wire 1 . cajaA [4] $end
+$var wire 1 / cajaA [3] $end
+$var wire 1 0 cajaA [2] $end
+$var wire 1 1 cajaA [1] $end
+$var wire 1 2 cajaA [0] $end
+$var wire 1 3 cajaB [8] $end
+$var wire 1 4 cajaB [7] $end
+$var wire 1 5 cajaB [6] $end
+$var wire 1 6 cajaB [5] $end
+$var wire 1 7 cajaB [4] $end
+$var wire 1 8 cajaB [3] $end
+$var wire 1 9 cajaB [2] $end
+$var wire 1 : cajaB [1] $end
+$var wire 1 ; cajaB [0] $end
+$var wire 1 < dataOutA [8] $end
+$var wire 1 = dataOutA [7] $end
+$var wire 1 > dataOutA [6] $end
+$var wire 1 ? dataOutA [5] $end
+$var wire 1 @ dataOutA [4] $end
+$var wire 1 A dataOutA [3] $end
+$var wire 1 B dataOutA [2] $end
+$var wire 1 C dataOutA [1] $end
+$var wire 1 D dataOutA [0] $end
+$var wire 1 E dataOutB [8] $end
+$var wire 1 F dataOutB [7] $end
+$var wire 1 G dataOutB [6] $end
+$var wire 1 H dataOutB [5] $end
+$var wire 1 I dataOutB [4] $end
+$var wire 1 J dataOutB [3] $end
+$var wire 1 K dataOutB [2] $end
+$var wire 1 L dataOutB [1] $end
+$var wire 1 M dataOutB [0] $end
+$var wire 1 N inmediato [8] $end
+$var wire 1 O inmediato [7] $end
+$var wire 1 P inmediato [6] $end
+$var wire 1 Q inmediato [5] $end
+$var wire 1 R inmediato [4] $end
+$var wire 1 S inmediato [3] $end
+$var wire 1 T inmediato [2] $end
+$var wire 1 U inmediato [1] $end
+$var wire 1 V inmediato [0] $end
+$var wire 1 W ResultadoAlu [8] $end
+$var wire 1 X ResultadoAlu [7] $end
+$var wire 1 Y ResultadoAlu [6] $end
+$var wire 1 Z ResultadoAlu [5] $end
+$var wire 1 [ ResultadoAlu [4] $end
+$var wire 1 \ ResultadoAlu [3] $end
+$var wire 1 ] ResultadoAlu [2] $end
+$var wire 1 ^ ResultadoAlu [1] $end
+$var wire 1 _ ResultadoAlu [0] $end
+$var wire 1 ` salidaAluOut [8] $end
+$var wire 1 a salidaAluOut [7] $end
+$var wire 1 b salidaAluOut [6] $end
+$var wire 1 c salidaAluOut [5] $end
+$var wire 1 d salidaAluOut [4] $end
+$var wire 1 e salidaAluOut [3] $end
+$var wire 1 f salidaAluOut [2] $end
+$var wire 1 g salidaAluOut [1] $end
+$var wire 1 h salidaAluOut [0] $end
+$var wire 1 i salidaMultiplexorB [8] $end
+$var wire 1 j salidaMultiplexorB [7] $end
+$var wire 1 k salidaMultiplexorB [6] $end
+$var wire 1 l salidaMultiplexorB [5] $end
+$var wire 1 m salidaMultiplexorB [4] $end
+$var wire 1 n salidaMultiplexorB [3] $end
+$var wire 1 o salidaMultiplexorB [2] $end
+$var wire 1 p salidaMultiplexorB [1] $end
+$var wire 1 q salidaMultiplexorB [0] $end
+$var wire 1 r salidaMultiplexorReg [8] $end
+$var wire 1 s salidaMultiplexorReg [7] $end
+$var wire 1 t salidaMultiplexorReg [6] $end
+$var wire 1 u salidaMultiplexorReg [5] $end
+$var wire 1 v salidaMultiplexorReg [4] $end
+$var wire 1 w salidaMultiplexorReg [3] $end
+$var wire 1 x salidaMultiplexorReg [2] $end
+$var wire 1 y salidaMultiplexorReg [1] $end
+$var wire 1 z salidaMultiplexorReg [0] $end
+$var wire 1 { sampler $end
+$scope module i1 $end
+$var wire 1 | gnd $end
+$var wire 1 } vcc $end
+$var wire 1 ~ unknown $end
+$var tri1 1 !! devclrn $end
+$var tri1 1 "! devpor $end
+$var tri1 1 #! devoe $end
+$var wire 1 $! MapRF|Mux296~0_combout $end
+$var wire 1 %! MapRF|Mux296~10_combout $end
+$var wire 1 &! MapRF|Mux296~11_combout $end
+$var wire 1 '! MapRF|Mux295~0_combout $end
+$var wire 1 (! MapRF|Mux295~1_combout $end
+$var wire 1 )! MapRF|Mux295~10_combout $end
+$var wire 1 *! MapRF|Mux295~11_combout $end
+$var wire 1 +! MapRF|Mux294~7_combout $end
+$var wire 1 ,! MapRF|Mux294~8_combout $end
+$var wire 1 -! MapRF|Mux293~10_combout $end
+$var wire 1 .! MapRF|Mux293~11_combout $end
+$var wire 1 /! MapRF|Mux292~0_combout $end
+$var wire 1 0! MapRF|Mux292~1_combout $end
+$var wire 1 1! MapRF|Mux292~17_combout $end
+$var wire 1 2! MapRF|Mux292~18_combout $end
+$var wire 1 3! MapRF|Mux291~4_combout $end
+$var wire 1 4! MapRF|Mux291~7_combout $end
+$var wire 1 5! MapRF|Mux290~17_combout $end
+$var wire 1 6! MapRF|Mux290~18_combout $end
+$var wire 1 7! MapRF|Mux289~10_combout $end
+$var wire 1 8! MapRF|Mux289~14_combout $end
+$var wire 1 9! MapRF|Mux289~15_combout $end
+$var wire 1 :! MapRF|Mux288~0_combout $end
+$var wire 1 ;! MapRF|Mux288~1_combout $end
+$var wire 1 <! MapRF|Mux288~17_combout $end
+$var wire 1 =! MapRF|Mux288~18_combout $end
+$var wire 1 >! MapRF|Mux305~2_combout $end
+$var wire 1 ?! MapRF|Mux305~17_combout $end
+$var wire 1 @! MapRF|Mux305~18_combout $end
+$var wire 1 A! MapRF|Mux304~10_combout $end
+$var wire 1 B! MapRF|Mux304~11_combout $end
+$var wire 1 C! MapRF|Mux303~7_combout $end
+$var wire 1 D! MapRF|Mux303~8_combout $end
+$var wire 1 E! MapRF|Mux303~10_combout $end
+$var wire 1 F! MapRF|Mux303~11_combout $end
+$var wire 1 G! MapRF|Mux302~0_combout $end
+$var wire 1 H! MapRF|Mux302~1_combout $end
+$var wire 1 I! MapRF|Mux302~7_combout $end
+$var wire 1 J! MapRF|Mux301~0_combout $end
+$var wire 1 K! MapRF|Mux301~1_combout $end
+$var wire 1 L! MapRF|Mux299~7_combout $end
+$var wire 1 M! MapRF|Mux299~8_combout $end
+$var wire 1 N! MapRF|Mux299~14_combout $end
+$var wire 1 O! MapRF|Mux299~17_combout $end
+$var wire 1 P! MapRF|Mux299~18_combout $end
+$var wire 1 Q! MapRF|Mux298~4_combout $end
+$var wire 1 R! MapRF|Mux297~0_combout $end
+$var wire 1 S! MapRF|Mux297~1_combout $end
+$var wire 1 T! MapRF|Mux297~2_combout $end
+$var wire 1 U! MapRF|Mux297~17_combout $end
+$var wire 1 V! MapRF|Mux297~18_combout $end
+$var wire 1 W! MapRF|REGISTER_11[0]~feeder_combout $end
+$var wire 1 X! MapRF|REGISTER_6[1]~feeder_combout $end
+$var wire 1 Y! MapRF|REGISTER_10[2]~feeder_combout $end
+$var wire 1 Z! MapRF|REGISTER_14[3]~feeder_combout $end
+$var wire 1 [! MapRF|REGISTER_10[6]~feeder_combout $end
+$var wire 1 \! MapRF|REGISTER_13[6]~feeder_combout $end
+$var wire 1 ]! MapRF|REGISTER_12[7]~feeder_combout $end
+$var wire 1 ^! MapRF|REGISTER_30[7]~feeder_combout $end
+$var wire 1 _! MapRF|REGISTER_17[8]~feeder_combout $end
+$var wire 1 `! MapRF|REGISTER_14[8]~feeder_combout $end
+$var wire 1 a! MapRF|REGISTER_12[8]~feeder_combout $end
+$var wire 1 b! SignalirWrite~combout $end
+$var wire 1 c! MapIR|inmediato[0]~feeder_combout $end
+$var wire 1 d! SignalAluSrcB~combout $end
+$var wire 1 e! MapRF|REGISTER_10[0]~feeder_combout $end
+$var wire 1 f! MapIR|Rd[0]~feeder_combout $end
+$var wire 1 g! signalWrite~combout $end
+$var wire 1 h! MapRF|Mux8~20_combout $end
+$var wire 1 i! MapRF|Mux8~21_combout $end
+$var wire 1 j! MapRF|Mux8~35_combout $end
+$var wire 1 k! MapRF|Mux8~37_combout $end
+$var wire 1 l! MapRF|Mux8~25_combout $end
+$var wire 1 m! MapRF|Mux8~27_combout $end
+$var wire 1 n! MapRF|Mux8~30_combout $end
+$var wire 1 o! MapRF|Mux8~31_combout $end
+$var wire 1 p! MapRF|Mux305~10_combout $end
+$var wire 1 q! MapRF|Mux305~11_combout $end
+$var wire 1 r! MapRF|Mux8~36_combout $end
+$var wire 1 s! MapRF|Mux8~26_combout $end
+$var wire 1 t! MapRF|Mux8~32_combout $end
+$var wire 1 u! MapRF|Mux8~22_combout $end
+$var wire 1 v! MapRF|Mux305~12_combout $end
+$var wire 1 w! MapRF|Mux305~13_combout $end
+$var wire 1 x! MapRF|Mux8~23_combout $end
+$var wire 1 y! MapRF|Mux8~38_combout $end
+$var wire 1 z! MapRF|Mux8~33_combout $end
+$var wire 1 {! MapRF|Mux8~28_combout $end
+$var wire 1 |! MapRF|Mux305~14_combout $end
+$var wire 1 }! MapRF|Mux305~15_combout $end
+$var wire 1 ~! MapRF|Mux305~16_combout $end
+$var wire 1 !" MapRF|Mux305~19_combout $end
+$var wire 1 "" MapRF|Mux8~0_combout $end
+$var wire 1 #" MapRF|Mux8~9_combout $end
+$var wire 1 $" MapRF|Mux8~2_combout $end
+$var wire 1 %" MapRF|Mux8~8_combout $end
+$var wire 1 &" MapRF|Mux8~4_combout $end
+$var wire 1 '" MapRF|Mux8~10_combout $end
+$var wire 1 (" MapRF|Mux305~0_combout $end
+$var wire 1 )" MapRF|Mux305~1_combout $end
+$var wire 1 *" MapRF|Mux8~17_combout $end
+$var wire 1 +" MapRF|Mux8~16_combout $end
+$var wire 1 ," MapRF|Mux8~18_combout $end
+$var wire 1 -" MapRF|Mux305~7_combout $end
+$var wire 1 ." MapRF|Mux8~6_combout $end
+$var wire 1 /" MapRF|Mux8~19_combout $end
+$var wire 1 0" MapRF|Mux305~8_combout $end
+$var wire 1 1" MapRF|REGISTER_28[0]~feeder_combout $end
+$var wire 1 2" MapRF|Mux8~15_combout $end
+$var wire 1 3" MapRF|Mux8~13_combout $end
+$var wire 1 4" MapRF|Mux8~12_combout $end
+$var wire 1 5" MapRF|REGISTER_16[0]~feeder_combout $end
+$var wire 1 6" MapRF|Mux8~14_combout $end
+$var wire 1 7" MapRF|Mux305~4_combout $end
+$var wire 1 8" MapRF|Mux305~5_combout $end
+$var wire 1 9" MapRF|Mux8~3_combout $end
+$var wire 1 :" MapRF|Mux8~7_combout $end
+$var wire 1 ;" MapRF|Mux305~3_combout $end
+$var wire 1 <" MapRF|Mux305~6_combout $end
+$var wire 1 =" MapRF|Mux305~9_combout $end
+$var wire 1 >" MapRF|Mux305~20_combout $end
+$var wire 1 ?" MapAluSrcB|salidamuxAluSrcB[0]~0_combout $end
+$var wire 1 @" MapALU|Add0~0_combout $end
+$var wire 1 A" MapALU|Add0~2_combout $end
+$var wire 1 B" SignalEnAlu~combout $end
+$var wire 1 C" SignalMemToReg~combout $end
+$var wire 1 D" MapMemToReg|salidaMuxMemToReg[0]~0_combout $end
+$var wire 1 E" MapRF|Mux8~1_combout $end
+$var wire 1 F" MapRF|Mux296~1_combout $end
+$var wire 1 G" MapRF|Mux8~11_combout $end
+$var wire 1 H" MapRF|Mux296~2_combout $end
+$var wire 1 I" MapRF|Mux296~3_combout $end
+$var wire 1 J" MapRF|Mux296~4_combout $end
+$var wire 1 K" MapRF|Mux296~5_combout $end
+$var wire 1 L" MapRF|Mux296~6_combout $end
+$var wire 1 M" MapRF|Mux296~7_combout $end
+$var wire 1 N" MapRF|Mux296~8_combout $end
+$var wire 1 O" MapRF|Mux296~9_combout $end
+$var wire 1 P" MapRF|Mux8~39_combout $end
+$var wire 1 Q" MapRF|Mux296~17_combout $end
+$var wire 1 R" MapRF|Mux296~18_combout $end
+$var wire 1 S" MapRF|Mux8~29_combout $end
+$var wire 1 T" MapRF|Mux296~12_combout $end
+$var wire 1 U" MapRF|Mux296~13_combout $end
+$var wire 1 V" MapRF|REGISTER_3[0]~feeder_combout $end
+$var wire 1 W" MapRF|Mux8~34_combout $end
+$var wire 1 X" MapRF|Mux296~14_combout $end
+$var wire 1 Y" MapRF|Mux296~15_combout $end
+$var wire 1 Z" MapRF|Mux296~16_combout $end
+$var wire 1 [" MapRF|Mux296~19_combout $end
+$var wire 1 \" MapRF|Mux296~20_combout $end
+$var wire 1 ]" MapMemToReg|salidaMuxMemToReg[1]~1_combout $end
+$var wire 1 ^" MapRF|REGISTER_9[1]~feeder_combout $end
+$var wire 1 _" MapRF|REGISTER_8[1]~feeder_combout $end
+$var wire 1 `" MapRF|REGISTER_10[1]~feeder_combout $end
+$var wire 1 a" MapRF|Mux295~12_combout $end
+$var wire 1 b" MapRF|REGISTER_11[1]~feeder_combout $end
+$var wire 1 c" MapRF|Mux8~24_combout $end
+$var wire 1 d" MapRF|Mux295~13_combout $end
+$var wire 1 e" MapRF|Mux295~14_combout $end
+$var wire 1 f" MapRF|Mux295~15_combout $end
+$var wire 1 g" MapRF|Mux295~16_combout $end
+$var wire 1 h" MapRF|REGISTER_15[1]~feeder_combout $end
+$var wire 1 i" MapRF|REGISTER_13[1]~feeder_combout $end
+$var wire 1 j" MapRF|Mux295~17_combout $end
+$var wire 1 k" MapRF|Mux295~18_combout $end
+$var wire 1 l" MapRF|Mux295~19_combout $end
+$var wire 1 m" MapRF|Mux295~2_combout $end
+$var wire 1 n" MapRF|Mux295~3_combout $end
+$var wire 1 o" MapRF|REGISTER_20[1]~feeder_combout $end
+$var wire 1 p" MapRF|REGISTER_16[1]~feeder_combout $end
+$var wire 1 q" MapRF|Mux295~4_combout $end
+$var wire 1 r" MapRF|REGISTER_28[1]~feeder_combout $end
+$var wire 1 s" MapRF|Mux295~5_combout $end
+$var wire 1 t" MapRF|Mux295~6_combout $end
+$var wire 1 u" MapRF|Mux295~7_combout $end
+$var wire 1 v" MapRF|Mux295~8_combout $end
+$var wire 1 w" MapRF|Mux295~9_combout $end
+$var wire 1 x" MapRF|Mux295~20_combout $end
+$var wire 1 y" MapRF|REGISTER_11[2]~feeder_combout $end
+$var wire 1 z" MapRF|Mux303~17_combout $end
+$var wire 1 {" MapRF|Mux303~18_combout $end
+$var wire 1 |" MapRF|REGISTER_0[2]~feeder_combout $end
+$var wire 1 }" MapRF|Mux303~14_combout $end
+$var wire 1 ~" MapRF|Mux303~15_combout $end
+$var wire 1 !# MapRF|REGISTER_13[2]~feeder_combout $end
+$var wire 1 "# MapRF|REGISTER_1[2]~feeder_combout $end
+$var wire 1 ## MapRF|Mux303~12_combout $end
+$var wire 1 $# MapRF|Mux303~13_combout $end
+$var wire 1 %# MapRF|Mux303~16_combout $end
+$var wire 1 &# MapRF|Mux303~19_combout $end
+$var wire 1 '# MapRF|Mux303~0_combout $end
+$var wire 1 (# MapRF|Mux303~1_combout $end
+$var wire 1 )# MapRF|Mux303~4_combout $end
+$var wire 1 *# MapRF|Mux303~5_combout $end
+$var wire 1 +# MapRF|Mux8~5_combout $end
+$var wire 1 ,# MapRF|REGISTER_22[2]~feeder_combout $end
+$var wire 1 -# MapRF|Mux303~2_combout $end
+$var wire 1 .# MapRF|Mux303~3_combout $end
+$var wire 1 /# MapRF|Mux303~6_combout $end
+$var wire 1 0# MapRF|Mux303~9_combout $end
+$var wire 1 1# MapRF|Mux303~20_combout $end
+$var wire 1 2# MapAluSrcB|salidamuxAluSrcB[2]~2_combout $end
+$var wire 1 3# MapRF|Mux304~17_combout $end
+$var wire 1 4# MapRF|Mux304~18_combout $end
+$var wire 1 5# MapRF|REGISTER_4[1]~feeder_combout $end
+$var wire 1 6# MapRF|Mux304~14_combout $end
+$var wire 1 7# MapRF|Mux304~15_combout $end
+$var wire 1 8# MapRF|Mux304~12_combout $end
+$var wire 1 9# MapRF|Mux304~13_combout $end
+$var wire 1 :# MapRF|Mux304~16_combout $end
+$var wire 1 ;# MapRF|Mux304~19_combout $end
+$var wire 1 <# MapRF|Mux304~0_combout $end
+$var wire 1 =# MapRF|Mux304~1_combout $end
+$var wire 1 ># MapRF|Mux304~7_combout $end
+$var wire 1 ?# MapRF|Mux304~8_combout $end
+$var wire 1 @# MapRF|Mux304~2_combout $end
+$var wire 1 A# MapRF|Mux304~3_combout $end
+$var wire 1 B# MapRF|Mux304~4_combout $end
+$var wire 1 C# MapRF|REGISTER_24[1]~feeder_combout $end
+$var wire 1 D# MapRF|Mux304~5_combout $end
+$var wire 1 E# MapRF|Mux304~6_combout $end
+$var wire 1 F# MapRF|Mux304~9_combout $end
+$var wire 1 G# MapRF|Mux304~20_combout $end
+$var wire 1 H# MapboxB|ExitB[1]~feeder_combout $end
+$var wire 1 I# MapAluSrcB|salidamuxAluSrcB[1]~1_combout $end
+$var wire 1 J# MapALU|Add0~1 $end
+$var wire 1 K# MapALU|Add0~4 $end
+$var wire 1 L# MapALU|Add0~6_combout $end
+$var wire 1 M# MapALU|Add0~8_combout $end
+$var wire 1 N# MapMemToReg|salidaMuxMemToReg[2]~2_combout $end
+$var wire 1 O# MapRF|REGISTER_26[2]~feeder_combout $end
+$var wire 1 P# MapRF|Mux294~0_combout $end
+$var wire 1 Q# MapRF|Mux294~1_combout $end
+$var wire 1 R# MapRF|Mux294~4_combout $end
+$var wire 1 S# MapRF|Mux294~5_combout $end
+$var wire 1 T# MapRF|Mux294~2_combout $end
+$var wire 1 U# MapRF|Mux294~3_combout $end
+$var wire 1 V# MapRF|Mux294~6_combout $end
+$var wire 1 W# MapRF|Mux294~9_combout $end
+$var wire 1 X# MapRF|Mux294~17_combout $end
+$var wire 1 Y# MapRF|Mux294~18_combout $end
+$var wire 1 Z# MapRF|REGISTER_9[2]~feeder_combout $end
+$var wire 1 [# MapRF|Mux294~10_combout $end
+$var wire 1 \# MapRF|Mux294~11_combout $end
+$var wire 1 ]# MapRF|Mux294~14_combout $end
+$var wire 1 ^# MapRF|Mux294~15_combout $end
+$var wire 1 _# MapRF|Mux294~12_combout $end
+$var wire 1 `# MapRF|Mux294~13_combout $end
+$var wire 1 a# MapRF|Mux294~16_combout $end
+$var wire 1 b# MapRF|Mux294~19_combout $end
+$var wire 1 c# MapRF|Mux294~20_combout $end
+$var wire 1 d# MapMemToReg|salidaMuxMemToReg[3]~3_combout $end
+$var wire 1 e# MapRF|Mux293~7_combout $end
+$var wire 1 f# MapRF|Mux293~8_combout $end
+$var wire 1 g# MapRF|Mux293~0_combout $end
+$var wire 1 h# MapRF|Mux293~1_combout $end
+$var wire 1 i# MapRF|Mux293~4_combout $end
+$var wire 1 j# MapRF|Mux293~5_combout $end
+$var wire 1 k# MapRF|Mux293~2_combout $end
+$var wire 1 l# MapRF|Mux293~3_combout $end
+$var wire 1 m# MapRF|Mux293~6_combout $end
+$var wire 1 n# MapRF|Mux293~9_combout $end
+$var wire 1 o# MapRF|REGISTER_15[3]~feeder_combout $end
+$var wire 1 p# MapRF|REGISTER_12[3]~feeder_combout $end
+$var wire 1 q# MapRF|REGISTER_13[3]~feeder_combout $end
+$var wire 1 r# MapRF|Mux293~17_combout $end
+$var wire 1 s# MapRF|Mux293~18_combout $end
+$var wire 1 t# MapRF|Mux293~14_combout $end
+$var wire 1 u# MapRF|Mux293~15_combout $end
+$var wire 1 v# MapRF|REGISTER_9[3]~feeder_combout $end
+$var wire 1 w# MapRF|Mux293~12_combout $end
+$var wire 1 x# MapRF|Mux293~13_combout $end
+$var wire 1 y# MapRF|Mux293~16_combout $end
+$var wire 1 z# MapRF|Mux293~19_combout $end
+$var wire 1 {# MapRF|Mux293~20_combout $end
+$var wire 1 |# MapMemToReg|salidaMuxMemToReg[4]~4_combout $end
+$var wire 1 }# MapRF|Mux292~10_combout $end
+$var wire 1 ~# MapRF|Mux292~11_combout $end
+$var wire 1 !$ MapRF|Mux292~14_combout $end
+$var wire 1 "$ MapRF|Mux292~15_combout $end
+$var wire 1 #$ MapRF|Mux292~12_combout $end
+$var wire 1 $$ MapRF|Mux292~13_combout $end
+$var wire 1 %$ MapRF|Mux292~16_combout $end
+$var wire 1 &$ MapRF|Mux292~19_combout $end
+$var wire 1 '$ MapRF|REGISTER_23[4]~feeder_combout $end
+$var wire 1 ($ MapRF|Mux292~7_combout $end
+$var wire 1 )$ MapRF|Mux292~8_combout $end
+$var wire 1 *$ MapRF|REGISTER_16[4]~feeder_combout $end
+$var wire 1 +$ MapRF|Mux292~4_combout $end
+$var wire 1 ,$ MapRF|Mux292~5_combout $end
+$var wire 1 -$ MapRF|Mux292~2_combout $end
+$var wire 1 .$ MapRF|Mux292~3_combout $end
+$var wire 1 /$ MapRF|Mux292~6_combout $end
+$var wire 1 0$ MapRF|Mux292~9_combout $end
+$var wire 1 1$ MapRF|Mux292~20_combout $end
+$var wire 1 2$ MapRF|Mux301~4_combout $end
+$var wire 1 3$ MapRF|REGISTER_28[4]~feeder_combout $end
+$var wire 1 4$ MapRF|Mux301~5_combout $end
+$var wire 1 5$ MapRF|REGISTER_29[4]~feeder_combout $end
+$var wire 1 6$ MapRF|Mux301~2_combout $end
+$var wire 1 7$ MapRF|Mux301~3_combout $end
+$var wire 1 8$ MapRF|Mux301~6_combout $end
+$var wire 1 9$ MapRF|Mux301~7_combout $end
+$var wire 1 :$ MapRF|Mux301~8_combout $end
+$var wire 1 ;$ MapRF|Mux301~9_combout $end
+$var wire 1 <$ MapRF|Mux301~17_combout $end
+$var wire 1 =$ MapRF|Mux301~18_combout $end
+$var wire 1 >$ MapRF|REGISTER_10[4]~feeder_combout $end
+$var wire 1 ?$ MapRF|Mux301~10_combout $end
+$var wire 1 @$ MapRF|Mux301~11_combout $end
+$var wire 1 A$ MapRF|Mux301~12_combout $end
+$var wire 1 B$ MapRF|Mux301~13_combout $end
+$var wire 1 C$ MapRF|Mux301~14_combout $end
+$var wire 1 D$ MapRF|Mux301~15_combout $end
+$var wire 1 E$ MapRF|Mux301~16_combout $end
+$var wire 1 F$ MapRF|Mux301~19_combout $end
+$var wire 1 G$ MapRF|Mux301~20_combout $end
+$var wire 1 H$ MapboxB|ExitB[4]~feeder_combout $end
+$var wire 1 I$ MapAluSrcB|salidamuxAluSrcB[4]~4_combout $end
+$var wire 1 J$ MapRF|Mux302~8_combout $end
+$var wire 1 K$ MapRF|REGISTER_28[3]~feeder_combout $end
+$var wire 1 L$ MapRF|Mux302~4_combout $end
+$var wire 1 M$ MapRF|Mux302~5_combout $end
+$var wire 1 N$ MapRF|Mux302~2_combout $end
+$var wire 1 O$ MapRF|Mux302~3_combout $end
+$var wire 1 P$ MapRF|Mux302~6_combout $end
+$var wire 1 Q$ MapRF|Mux302~9_combout $end
+$var wire 1 R$ MapRF|Mux302~17_combout $end
+$var wire 1 S$ MapRF|Mux302~18_combout $end
+$var wire 1 T$ MapRF|Mux302~10_combout $end
+$var wire 1 U$ MapRF|Mux302~11_combout $end
+$var wire 1 V$ MapRF|Mux302~14_combout $end
+$var wire 1 W$ MapRF|Mux302~15_combout $end
+$var wire 1 X$ MapRF|Mux302~12_combout $end
+$var wire 1 Y$ MapRF|Mux302~13_combout $end
+$var wire 1 Z$ MapRF|Mux302~16_combout $end
+$var wire 1 [$ MapRF|Mux302~19_combout $end
+$var wire 1 \$ MapRF|Mux302~20_combout $end
+$var wire 1 ]$ MapboxB|ExitB[3]~feeder_combout $end
+$var wire 1 ^$ MapAluSrcB|salidamuxAluSrcB[3]~3_combout $end
+$var wire 1 _$ MapALU|Add0~7 $end
+$var wire 1 `$ MapALU|Add0~10 $end
+$var wire 1 a$ MapALU|Add0~13 $end
+$var wire 1 b$ MapALU|Add0~15_combout $end
+$var wire 1 c$ MapALU|Add0~17_combout $end
+$var wire 1 d$ MapMemToReg|salidaMuxMemToReg[5]~5_combout $end
+$var wire 1 e$ MapRF|Mux291~10_combout $end
+$var wire 1 f$ MapRF|Mux291~11_combout $end
+$var wire 1 g$ MapRF|Mux291~17_combout $end
+$var wire 1 h$ MapRF|Mux291~18_combout $end
+$var wire 1 i$ MapRF|REGISTER_10[5]~feeder_combout $end
+$var wire 1 j$ MapRF|Mux291~12_combout $end
+$var wire 1 k$ MapRF|Mux291~13_combout $end
+$var wire 1 l$ MapRF|Mux291~14_combout $end
+$var wire 1 m$ MapRF|Mux291~15_combout $end
+$var wire 1 n$ MapRF|Mux291~16_combout $end
+$var wire 1 o$ MapRF|Mux291~19_combout $end
+$var wire 1 p$ MapRF|REGISTER_29[5]~feeder_combout $end
+$var wire 1 q$ MapRF|Mux291~0_combout $end
+$var wire 1 r$ MapRF|Mux291~1_combout $end
+$var wire 1 s$ MapRF|Mux291~8_combout $end
+$var wire 1 t$ MapRF|REGISTER_22[5]~feeder_combout $end
+$var wire 1 u$ MapRF|Mux291~2_combout $end
+$var wire 1 v$ MapRF|Mux291~3_combout $end
+$var wire 1 w$ MapRF|Mux291~5_combout $end
+$var wire 1 x$ MapRF|Mux291~6_combout $end
+$var wire 1 y$ MapRF|Mux291~9_combout $end
+$var wire 1 z$ MapRF|Mux291~20_combout $end
+$var wire 1 {$ MapRF|Mux299~10_combout $end
+$var wire 1 |$ MapRF|Mux299~11_combout $end
+$var wire 1 }$ MapRF|Mux299~15_combout $end
+$var wire 1 ~$ MapRF|Mux299~12_combout $end
+$var wire 1 !% MapRF|Mux299~13_combout $end
+$var wire 1 "% MapRF|Mux299~16_combout $end
+$var wire 1 #% MapRF|Mux299~19_combout $end
+$var wire 1 $% MapRF|Mux299~0_combout $end
+$var wire 1 %% MapRF|Mux299~1_combout $end
+$var wire 1 &% MapRF|REGISTER_29[6]~feeder_combout $end
+$var wire 1 '% MapRF|Mux299~2_combout $end
+$var wire 1 (% MapRF|Mux299~3_combout $end
+$var wire 1 )% MapRF|Mux299~4_combout $end
+$var wire 1 *% MapRF|Mux299~5_combout $end
+$var wire 1 +% MapRF|Mux299~6_combout $end
+$var wire 1 ,% MapRF|Mux299~9_combout $end
+$var wire 1 -% MapRF|Mux299~20_combout $end
+$var wire 1 .% MapAluSrcB|salidamuxAluSrcB[6]~6_combout $end
+$var wire 1 /% MapALU|Add0~16 $end
+$var wire 1 0% MapALU|Add0~18_combout $end
+$var wire 1 1% MapALU|Add0~20_combout $end
+$var wire 1 2% MapMemToReg|salidaMuxMemToReg[6]~6_combout $end
+$var wire 1 3% MapRF|Mux290~7_combout $end
+$var wire 1 4% MapRF|Mux290~8_combout $end
+$var wire 1 5% MapRF|Mux290~2_combout $end
+$var wire 1 6% MapRF|Mux290~3_combout $end
+$var wire 1 7% MapRF|Mux290~4_combout $end
+$var wire 1 8% MapRF|Mux290~5_combout $end
+$var wire 1 9% MapRF|Mux290~6_combout $end
+$var wire 1 :% MapRF|Mux290~0_combout $end
+$var wire 1 ;% MapRF|Mux290~1_combout $end
+$var wire 1 <% MapRF|Mux290~9_combout $end
+$var wire 1 =% MapRF|Mux290~10_combout $end
+$var wire 1 >% MapRF|Mux290~11_combout $end
+$var wire 1 ?% MapRF|Mux290~14_combout $end
+$var wire 1 @% MapRF|Mux290~15_combout $end
+$var wire 1 A% MapRF|Mux290~12_combout $end
+$var wire 1 B% MapRF|Mux290~13_combout $end
+$var wire 1 C% MapRF|Mux290~16_combout $end
+$var wire 1 D% MapRF|Mux290~19_combout $end
+$var wire 1 E% MapRF|Mux290~20_combout $end
+$var wire 1 F% MapRF|REGISTER_29[7]~feeder_combout $end
+$var wire 1 G% MapRF|Mux298~0_combout $end
+$var wire 1 H% MapRF|Mux298~1_combout $end
+$var wire 1 I% MapRF|Mux298~5_combout $end
+$var wire 1 J% MapRF|REGISTER_26[7]~feeder_combout $end
+$var wire 1 K% MapRF|Mux298~2_combout $end
+$var wire 1 L% MapRF|Mux298~3_combout $end
+$var wire 1 M% MapRF|Mux298~6_combout $end
+$var wire 1 N% MapRF|REGISTER_31[7]~feeder_combout $end
+$var wire 1 O% MapRF|REGISTER_27[7]~feeder_combout $end
+$var wire 1 P% MapRF|REGISTER_19[7]~feeder_combout $end
+$var wire 1 Q% MapRF|Mux298~7_combout $end
+$var wire 1 R% MapRF|Mux298~8_combout $end
+$var wire 1 S% MapRF|Mux298~9_combout $end
+$var wire 1 T% MapRF|REGISTER_14[7]~feeder_combout $end
+$var wire 1 U% MapRF|Mux298~17_combout $end
+$var wire 1 V% MapRF|Mux298~18_combout $end
+$var wire 1 W% MapRF|REGISTER_5[7]~feeder_combout $end
+$var wire 1 X% MapRF|Mux298~10_combout $end
+$var wire 1 Y% MapRF|Mux298~11_combout $end
+$var wire 1 Z% MapRF|Mux298~14_combout $end
+$var wire 1 [% MapRF|Mux298~15_combout $end
+$var wire 1 \% MapRF|Mux298~12_combout $end
+$var wire 1 ]% MapRF|Mux298~13_combout $end
+$var wire 1 ^% MapRF|Mux298~16_combout $end
+$var wire 1 _% MapRF|Mux298~19_combout $end
+$var wire 1 `% MapRF|Mux298~20_combout $end
+$var wire 1 a% MapAluSrcB|salidamuxAluSrcB[7]~7_combout $end
+$var wire 1 b% MapALU|Add0~19 $end
+$var wire 1 c% MapALU|Add0~21_combout $end
+$var wire 1 d% MapALU|Add0~23_combout $end
+$var wire 1 e% MapMemToReg|salidaMuxMemToReg[7]~7_combout $end
+$var wire 1 f% MapRF|Mux289~17_combout $end
+$var wire 1 g% MapRF|REGISTER_15[7]~feeder_combout $end
+$var wire 1 h% MapRF|Mux289~18_combout $end
+$var wire 1 i% MapRF|Mux289~12_combout $end
+$var wire 1 j% MapRF|Mux289~13_combout $end
+$var wire 1 k% MapRF|Mux289~16_combout $end
+$var wire 1 l% MapRF|Mux289~11_combout $end
+$var wire 1 m% MapRF|Mux289~19_combout $end
+$var wire 1 n% MapRF|Mux289~7_combout $end
+$var wire 1 o% MapRF|Mux289~8_combout $end
+$var wire 1 p% MapRF|Mux289~0_combout $end
+$var wire 1 q% MapRF|Mux289~1_combout $end
+$var wire 1 r% MapRF|Mux289~4_combout $end
+$var wire 1 s% MapRF|Mux289~5_combout $end
+$var wire 1 t% MapRF|REGISTER_22[7]~feeder_combout $end
+$var wire 1 u% MapRF|Mux289~2_combout $end
+$var wire 1 v% MapRF|Mux289~3_combout $end
+$var wire 1 w% MapRF|Mux289~6_combout $end
+$var wire 1 x% MapRF|Mux289~9_combout $end
+$var wire 1 y% MapRF|Mux289~20_combout $end
+$var wire 1 z% MapboxA|ExitA[8]~feeder_combout $end
+$var wire 1 {% MapRF|REGISTER_0[8]~feeder_combout $end
+$var wire 1 |% MapRF|Mux297~14_combout $end
+$var wire 1 }% MapRF|Mux297~15_combout $end
+$var wire 1 ~% MapRF|Mux297~12_combout $end
+$var wire 1 !& MapRF|Mux297~13_combout $end
+$var wire 1 "& MapRF|Mux297~16_combout $end
+$var wire 1 #& MapRF|Mux297~10_combout $end
+$var wire 1 $& MapRF|Mux297~11_combout $end
+$var wire 1 %& MapRF|Mux297~19_combout $end
+$var wire 1 && MapRF|Mux297~7_combout $end
+$var wire 1 '& MapRF|Mux297~8_combout $end
+$var wire 1 (& MapRF|REGISTER_29[8]~feeder_combout $end
+$var wire 1 )& MapRF|REGISTER_25[8]~feeder_combout $end
+$var wire 1 *& MapRF|Mux297~3_combout $end
+$var wire 1 +& MapRF|Mux297~4_combout $end
+$var wire 1 ,& MapRF|Mux297~5_combout $end
+$var wire 1 -& MapRF|Mux297~6_combout $end
+$var wire 1 .& MapRF|Mux297~9_combout $end
+$var wire 1 /& MapRF|Mux297~20_combout $end
+$var wire 1 0& MapAluSrcB|salidamuxAluSrcB[8]~8_combout $end
+$var wire 1 1& MapALU|Add0~22 $end
+$var wire 1 2& MapALU|Add0~24_combout $end
+$var wire 1 3& MapALU|Add0~26_combout $end
+$var wire 1 4& MapMemToReg|salidaMuxMemToReg[8]~8_combout $end
+$var wire 1 5& MapRF|Mux288~10_combout $end
+$var wire 1 6& MapRF|Mux288~11_combout $end
+$var wire 1 7& MapRF|Mux288~12_combout $end
+$var wire 1 8& MapRF|Mux288~13_combout $end
+$var wire 1 9& MapRF|REGISTER_3[8]~feeder_combout $end
+$var wire 1 :& MapRF|Mux288~14_combout $end
+$var wire 1 ;& MapRF|Mux288~15_combout $end
+$var wire 1 <& MapRF|Mux288~16_combout $end
+$var wire 1 =& MapRF|Mux288~19_combout $end
+$var wire 1 >& MapRF|Mux288~7_combout $end
+$var wire 1 ?& MapRF|Mux288~8_combout $end
+$var wire 1 @& MapRF|REGISTER_21[8]~feeder_combout $end
+$var wire 1 A& MapRF|Mux288~2_combout $end
+$var wire 1 B& MapRF|Mux288~3_combout $end
+$var wire 1 C& MapRF|Mux288~4_combout $end
+$var wire 1 D& MapRF|Mux288~5_combout $end
+$var wire 1 E& MapRF|Mux288~6_combout $end
+$var wire 1 F& MapRF|Mux288~9_combout $end
+$var wire 1 G& MapRF|Mux288~20_combout $end
+$var wire 1 H& MapRF|Mux300~7_combout $end
+$var wire 1 I& MapRF|Mux300~8_combout $end
+$var wire 1 J& MapRF|Mux300~4_combout $end
+$var wire 1 K& MapRF|Mux300~5_combout $end
+$var wire 1 L& MapRF|Mux300~2_combout $end
+$var wire 1 M& MapRF|Mux300~3_combout $end
+$var wire 1 N& MapRF|Mux300~6_combout $end
+$var wire 1 O& MapRF|Mux300~0_combout $end
+$var wire 1 P& MapRF|Mux300~1_combout $end
+$var wire 1 Q& MapRF|Mux300~9_combout $end
+$var wire 1 R& MapRF|Mux300~17_combout $end
+$var wire 1 S& MapRF|Mux300~18_combout $end
+$var wire 1 T& MapRF|Mux300~10_combout $end
+$var wire 1 U& MapRF|Mux300~11_combout $end
+$var wire 1 V& MapRF|REGISTER_0[5]~feeder_combout $end
+$var wire 1 W& MapRF|Mux300~14_combout $end
+$var wire 1 X& MapRF|Mux300~15_combout $end
+$var wire 1 Y& MapRF|Mux300~12_combout $end
+$var wire 1 Z& MapRF|Mux300~13_combout $end
+$var wire 1 [& MapRF|Mux300~16_combout $end
+$var wire 1 \& MapRF|Mux300~19_combout $end
+$var wire 1 ]& MapRF|Mux300~20_combout $end
+$var wire 1 ^& Clock~combout $end
+$var wire 1 _& Clock~clkctrl_outclk $end
+$var wire 1 `& MapboxA|ExitA[0]~feeder_combout $end
+$var wire 1 a& MapboxA|ExitA[1]~feeder_combout $end
+$var wire 1 b& MapboxA|ExitA[3]~feeder_combout $end
+$var wire 1 c& MapboxA|ExitA[7]~feeder_combout $end
+$var wire 1 d& MapALU|Add0~3_combout $end
+$var wire 1 e& MapALU|Add0~5_combout $end
+$var wire 1 f& MapALU|Add0~9_combout $end
+$var wire 1 g& MapALU|Add0~11_combout $end
+$var wire 1 h& MapALU|Add0~12_combout $end
+$var wire 1 i& MapALU|Add0~14_combout $end
+$var wire 1 j& MapAluSrcB|salidamuxAluSrcB[5]~5_combout $end
+$var wire 1 k& MapRF|REGISTER_9 [8] $end
+$var wire 1 l& MapRF|REGISTER_9 [7] $end
+$var wire 1 m& MapRF|REGISTER_9 [6] $end
+$var wire 1 n& MapRF|REGISTER_9 [5] $end
+$var wire 1 o& MapRF|REGISTER_9 [4] $end
+$var wire 1 p& MapRF|REGISTER_9 [3] $end
+$var wire 1 q& MapRF|REGISTER_9 [2] $end
+$var wire 1 r& MapRF|REGISTER_9 [1] $end
+$var wire 1 s& MapRF|REGISTER_9 [0] $end
+$var wire 1 t& MapRF|REGISTER_8 [8] $end
+$var wire 1 u& MapRF|REGISTER_8 [7] $end
+$var wire 1 v& MapRF|REGISTER_8 [6] $end
+$var wire 1 w& MapRF|REGISTER_8 [5] $end
+$var wire 1 x& MapRF|REGISTER_8 [4] $end
+$var wire 1 y& MapRF|REGISTER_8 [3] $end
+$var wire 1 z& MapRF|REGISTER_8 [2] $end
+$var wire 1 {& MapRF|REGISTER_8 [1] $end
+$var wire 1 |& MapRF|REGISTER_8 [0] $end
+$var wire 1 }& MapRF|REGISTER_7 [8] $end
+$var wire 1 ~& MapRF|REGISTER_7 [7] $end
+$var wire 1 !' MapRF|REGISTER_7 [6] $end
+$var wire 1 "' MapRF|REGISTER_7 [5] $end
+$var wire 1 #' MapRF|REGISTER_7 [4] $end
+$var wire 1 $' MapRF|REGISTER_7 [3] $end
+$var wire 1 %' MapRF|REGISTER_7 [2] $end
+$var wire 1 &' MapRF|REGISTER_7 [1] $end
+$var wire 1 '' MapRF|REGISTER_7 [0] $end
+$var wire 1 (' MapRF|REGISTER_6 [8] $end
+$var wire 1 )' MapRF|REGISTER_6 [7] $end
+$var wire 1 *' MapRF|REGISTER_6 [6] $end
+$var wire 1 +' MapRF|REGISTER_6 [5] $end
+$var wire 1 ,' MapRF|REGISTER_6 [4] $end
+$var wire 1 -' MapRF|REGISTER_6 [3] $end
+$var wire 1 .' MapRF|REGISTER_6 [2] $end
+$var wire 1 /' MapRF|REGISTER_6 [1] $end
+$var wire 1 0' MapRF|REGISTER_6 [0] $end
+$var wire 1 1' MapRF|REGISTER_5 [8] $end
+$var wire 1 2' MapRF|REGISTER_5 [7] $end
+$var wire 1 3' MapRF|REGISTER_5 [6] $end
+$var wire 1 4' MapRF|REGISTER_5 [5] $end
+$var wire 1 5' MapRF|REGISTER_5 [4] $end
+$var wire 1 6' MapRF|REGISTER_5 [3] $end
+$var wire 1 7' MapRF|REGISTER_5 [2] $end
+$var wire 1 8' MapRF|REGISTER_5 [1] $end
+$var wire 1 9' MapRF|REGISTER_5 [0] $end
+$var wire 1 :' MapRF|REGISTER_4 [8] $end
+$var wire 1 ;' MapRF|REGISTER_4 [7] $end
+$var wire 1 <' MapRF|REGISTER_4 [6] $end
+$var wire 1 =' MapRF|REGISTER_4 [5] $end
+$var wire 1 >' MapRF|REGISTER_4 [4] $end
+$var wire 1 ?' MapRF|REGISTER_4 [3] $end
+$var wire 1 @' MapRF|REGISTER_4 [2] $end
+$var wire 1 A' MapRF|REGISTER_4 [1] $end
+$var wire 1 B' MapRF|REGISTER_4 [0] $end
+$var wire 1 C' MapRF|REGISTER_31 [8] $end
+$var wire 1 D' MapRF|REGISTER_31 [7] $end
+$var wire 1 E' MapRF|REGISTER_31 [6] $end
+$var wire 1 F' MapRF|REGISTER_31 [5] $end
+$var wire 1 G' MapRF|REGISTER_31 [4] $end
+$var wire 1 H' MapRF|REGISTER_31 [3] $end
+$var wire 1 I' MapRF|REGISTER_31 [2] $end
+$var wire 1 J' MapRF|REGISTER_31 [1] $end
+$var wire 1 K' MapRF|REGISTER_31 [0] $end
+$var wire 1 L' MapRF|REGISTER_30 [8] $end
+$var wire 1 M' MapRF|REGISTER_30 [7] $end
+$var wire 1 N' MapRF|REGISTER_30 [6] $end
+$var wire 1 O' MapRF|REGISTER_30 [5] $end
+$var wire 1 P' MapRF|REGISTER_30 [4] $end
+$var wire 1 Q' MapRF|REGISTER_30 [3] $end
+$var wire 1 R' MapRF|REGISTER_30 [2] $end
+$var wire 1 S' MapRF|REGISTER_30 [1] $end
+$var wire 1 T' MapRF|REGISTER_30 [0] $end
+$var wire 1 U' MapRF|REGISTER_3 [8] $end
+$var wire 1 V' MapRF|REGISTER_3 [7] $end
+$var wire 1 W' MapRF|REGISTER_3 [6] $end
+$var wire 1 X' MapRF|REGISTER_3 [5] $end
+$var wire 1 Y' MapRF|REGISTER_3 [4] $end
+$var wire 1 Z' MapRF|REGISTER_3 [3] $end
+$var wire 1 [' MapRF|REGISTER_3 [2] $end
+$var wire 1 \' MapRF|REGISTER_3 [1] $end
+$var wire 1 ]' MapRF|REGISTER_3 [0] $end
+$var wire 1 ^' MapRF|REGISTER_29 [8] $end
+$var wire 1 _' MapRF|REGISTER_29 [7] $end
+$var wire 1 `' MapRF|REGISTER_29 [6] $end
+$var wire 1 a' MapRF|REGISTER_29 [5] $end
+$var wire 1 b' MapRF|REGISTER_29 [4] $end
+$var wire 1 c' MapRF|REGISTER_29 [3] $end
+$var wire 1 d' MapRF|REGISTER_29 [2] $end
+$var wire 1 e' MapRF|REGISTER_29 [1] $end
+$var wire 1 f' MapRF|REGISTER_29 [0] $end
+$var wire 1 g' MapRF|REGISTER_28 [8] $end
+$var wire 1 h' MapRF|REGISTER_28 [7] $end
+$var wire 1 i' MapRF|REGISTER_28 [6] $end
+$var wire 1 j' MapRF|REGISTER_28 [5] $end
+$var wire 1 k' MapRF|REGISTER_28 [4] $end
+$var wire 1 l' MapRF|REGISTER_28 [3] $end
+$var wire 1 m' MapRF|REGISTER_28 [2] $end
+$var wire 1 n' MapRF|REGISTER_28 [1] $end
+$var wire 1 o' MapRF|REGISTER_28 [0] $end
+$var wire 1 p' MapRF|REGISTER_27 [8] $end
+$var wire 1 q' MapRF|REGISTER_27 [7] $end
+$var wire 1 r' MapRF|REGISTER_27 [6] $end
+$var wire 1 s' MapRF|REGISTER_27 [5] $end
+$var wire 1 t' MapRF|REGISTER_27 [4] $end
+$var wire 1 u' MapRF|REGISTER_27 [3] $end
+$var wire 1 v' MapRF|REGISTER_27 [2] $end
+$var wire 1 w' MapRF|REGISTER_27 [1] $end
+$var wire 1 x' MapRF|REGISTER_27 [0] $end
+$var wire 1 y' MapRF|REGISTER_26 [8] $end
+$var wire 1 z' MapRF|REGISTER_26 [7] $end
+$var wire 1 {' MapRF|REGISTER_26 [6] $end
+$var wire 1 |' MapRF|REGISTER_26 [5] $end
+$var wire 1 }' MapRF|REGISTER_26 [4] $end
+$var wire 1 ~' MapRF|REGISTER_26 [3] $end
+$var wire 1 !( MapRF|REGISTER_26 [2] $end
+$var wire 1 "( MapRF|REGISTER_26 [1] $end
+$var wire 1 #( MapRF|REGISTER_26 [0] $end
+$var wire 1 $( MapRF|REGISTER_25 [8] $end
+$var wire 1 %( MapRF|REGISTER_25 [7] $end
+$var wire 1 &( MapRF|REGISTER_25 [6] $end
+$var wire 1 '( MapRF|REGISTER_25 [5] $end
+$var wire 1 (( MapRF|REGISTER_25 [4] $end
+$var wire 1 )( MapRF|REGISTER_25 [3] $end
+$var wire 1 *( MapRF|REGISTER_25 [2] $end
+$var wire 1 +( MapRF|REGISTER_25 [1] $end
+$var wire 1 ,( MapRF|REGISTER_25 [0] $end
+$var wire 1 -( MapRF|REGISTER_24 [8] $end
+$var wire 1 .( MapRF|REGISTER_24 [7] $end
+$var wire 1 /( MapRF|REGISTER_24 [6] $end
+$var wire 1 0( MapRF|REGISTER_24 [5] $end
+$var wire 1 1( MapRF|REGISTER_24 [4] $end
+$var wire 1 2( MapRF|REGISTER_24 [3] $end
+$var wire 1 3( MapRF|REGISTER_24 [2] $end
+$var wire 1 4( MapRF|REGISTER_24 [1] $end
+$var wire 1 5( MapRF|REGISTER_24 [0] $end
+$var wire 1 6( MapRF|REGISTER_23 [8] $end
+$var wire 1 7( MapRF|REGISTER_23 [7] $end
+$var wire 1 8( MapRF|REGISTER_23 [6] $end
+$var wire 1 9( MapRF|REGISTER_23 [5] $end
+$var wire 1 :( MapRF|REGISTER_23 [4] $end
+$var wire 1 ;( MapRF|REGISTER_23 [3] $end
+$var wire 1 <( MapRF|REGISTER_23 [2] $end
+$var wire 1 =( MapRF|REGISTER_23 [1] $end
+$var wire 1 >( MapRF|REGISTER_23 [0] $end
+$var wire 1 ?( MapRF|REGISTER_22 [8] $end
+$var wire 1 @( MapRF|REGISTER_22 [7] $end
+$var wire 1 A( MapRF|REGISTER_22 [6] $end
+$var wire 1 B( MapRF|REGISTER_22 [5] $end
+$var wire 1 C( MapRF|REGISTER_22 [4] $end
+$var wire 1 D( MapRF|REGISTER_22 [3] $end
+$var wire 1 E( MapRF|REGISTER_22 [2] $end
+$var wire 1 F( MapRF|REGISTER_22 [1] $end
+$var wire 1 G( MapRF|REGISTER_22 [0] $end
+$var wire 1 H( MapRF|REGISTER_21 [8] $end
+$var wire 1 I( MapRF|REGISTER_21 [7] $end
+$var wire 1 J( MapRF|REGISTER_21 [6] $end
+$var wire 1 K( MapRF|REGISTER_21 [5] $end
+$var wire 1 L( MapRF|REGISTER_21 [4] $end
+$var wire 1 M( MapRF|REGISTER_21 [3] $end
+$var wire 1 N( MapRF|REGISTER_21 [2] $end
+$var wire 1 O( MapRF|REGISTER_21 [1] $end
+$var wire 1 P( MapRF|REGISTER_21 [0] $end
+$var wire 1 Q( MapRF|REGISTER_20 [8] $end
+$var wire 1 R( MapRF|REGISTER_20 [7] $end
+$var wire 1 S( MapRF|REGISTER_20 [6] $end
+$var wire 1 T( MapRF|REGISTER_20 [5] $end
+$var wire 1 U( MapRF|REGISTER_20 [4] $end
+$var wire 1 V( MapRF|REGISTER_20 [3] $end
+$var wire 1 W( MapRF|REGISTER_20 [2] $end
+$var wire 1 X( MapRF|REGISTER_20 [1] $end
+$var wire 1 Y( MapRF|REGISTER_20 [0] $end
+$var wire 1 Z( MapRF|REGISTER_2 [8] $end
+$var wire 1 [( MapRF|REGISTER_2 [7] $end
+$var wire 1 \( MapRF|REGISTER_2 [6] $end
+$var wire 1 ]( MapRF|REGISTER_2 [5] $end
+$var wire 1 ^( MapRF|REGISTER_2 [4] $end
+$var wire 1 _( MapRF|REGISTER_2 [3] $end
+$var wire 1 `( MapRF|REGISTER_2 [2] $end
+$var wire 1 a( MapRF|REGISTER_2 [1] $end
+$var wire 1 b( MapRF|REGISTER_2 [0] $end
+$var wire 1 c( MapRF|REGISTER_19 [8] $end
+$var wire 1 d( MapRF|REGISTER_19 [7] $end
+$var wire 1 e( MapRF|REGISTER_19 [6] $end
+$var wire 1 f( MapRF|REGISTER_19 [5] $end
+$var wire 1 g( MapRF|REGISTER_19 [4] $end
+$var wire 1 h( MapRF|REGISTER_19 [3] $end
+$var wire 1 i( MapRF|REGISTER_19 [2] $end
+$var wire 1 j( MapRF|REGISTER_19 [1] $end
+$var wire 1 k( MapRF|REGISTER_19 [0] $end
+$var wire 1 l( MapRF|REGISTER_18 [8] $end
+$var wire 1 m( MapRF|REGISTER_18 [7] $end
+$var wire 1 n( MapRF|REGISTER_18 [6] $end
+$var wire 1 o( MapRF|REGISTER_18 [5] $end
+$var wire 1 p( MapRF|REGISTER_18 [4] $end
+$var wire 1 q( MapRF|REGISTER_18 [3] $end
+$var wire 1 r( MapRF|REGISTER_18 [2] $end
+$var wire 1 s( MapRF|REGISTER_18 [1] $end
+$var wire 1 t( MapRF|REGISTER_18 [0] $end
+$var wire 1 u( MapRF|REGISTER_17 [8] $end
+$var wire 1 v( MapRF|REGISTER_17 [7] $end
+$var wire 1 w( MapRF|REGISTER_17 [6] $end
+$var wire 1 x( MapRF|REGISTER_17 [5] $end
+$var wire 1 y( MapRF|REGISTER_17 [4] $end
+$var wire 1 z( MapRF|REGISTER_17 [3] $end
+$var wire 1 {( MapRF|REGISTER_17 [2] $end
+$var wire 1 |( MapRF|REGISTER_17 [1] $end
+$var wire 1 }( MapRF|REGISTER_17 [0] $end
+$var wire 1 ~( MapRF|REGISTER_16 [8] $end
+$var wire 1 !) MapRF|REGISTER_16 [7] $end
+$var wire 1 ") MapRF|REGISTER_16 [6] $end
+$var wire 1 #) MapRF|REGISTER_16 [5] $end
+$var wire 1 $) MapRF|REGISTER_16 [4] $end
+$var wire 1 %) MapRF|REGISTER_16 [3] $end
+$var wire 1 &) MapRF|REGISTER_16 [2] $end
+$var wire 1 ') MapRF|REGISTER_16 [1] $end
+$var wire 1 () MapRF|REGISTER_16 [0] $end
+$var wire 1 )) MapRF|REGISTER_15 [8] $end
+$var wire 1 *) MapRF|REGISTER_15 [7] $end
+$var wire 1 +) MapRF|REGISTER_15 [6] $end
+$var wire 1 ,) MapRF|REGISTER_15 [5] $end
+$var wire 1 -) MapRF|REGISTER_15 [4] $end
+$var wire 1 .) MapRF|REGISTER_15 [3] $end
+$var wire 1 /) MapRF|REGISTER_15 [2] $end
+$var wire 1 0) MapRF|REGISTER_15 [1] $end
+$var wire 1 1) MapRF|REGISTER_15 [0] $end
+$var wire 1 2) MapRF|REGISTER_14 [8] $end
+$var wire 1 3) MapRF|REGISTER_14 [7] $end
+$var wire 1 4) MapRF|REGISTER_14 [6] $end
+$var wire 1 5) MapRF|REGISTER_14 [5] $end
+$var wire 1 6) MapRF|REGISTER_14 [4] $end
+$var wire 1 7) MapRF|REGISTER_14 [3] $end
+$var wire 1 8) MapRF|REGISTER_14 [2] $end
+$var wire 1 9) MapRF|REGISTER_14 [1] $end
+$var wire 1 :) MapRF|REGISTER_14 [0] $end
+$var wire 1 ;) MapRF|REGISTER_13 [8] $end
+$var wire 1 <) MapRF|REGISTER_13 [7] $end
+$var wire 1 =) MapRF|REGISTER_13 [6] $end
+$var wire 1 >) MapRF|REGISTER_13 [5] $end
+$var wire 1 ?) MapRF|REGISTER_13 [4] $end
+$var wire 1 @) MapRF|REGISTER_13 [3] $end
+$var wire 1 A) MapRF|REGISTER_13 [2] $end
+$var wire 1 B) MapRF|REGISTER_13 [1] $end
+$var wire 1 C) MapRF|REGISTER_13 [0] $end
+$var wire 1 D) MapRF|REGISTER_12 [8] $end
+$var wire 1 E) MapRF|REGISTER_12 [7] $end
+$var wire 1 F) MapRF|REGISTER_12 [6] $end
+$var wire 1 G) MapRF|REGISTER_12 [5] $end
+$var wire 1 H) MapRF|REGISTER_12 [4] $end
+$var wire 1 I) MapRF|REGISTER_12 [3] $end
+$var wire 1 J) MapRF|REGISTER_12 [2] $end
+$var wire 1 K) MapRF|REGISTER_12 [1] $end
+$var wire 1 L) MapRF|REGISTER_12 [0] $end
+$var wire 1 M) MapRF|REGISTER_11 [8] $end
+$var wire 1 N) MapRF|REGISTER_11 [7] $end
+$var wire 1 O) MapRF|REGISTER_11 [6] $end
+$var wire 1 P) MapRF|REGISTER_11 [5] $end
+$var wire 1 Q) MapRF|REGISTER_11 [4] $end
+$var wire 1 R) MapRF|REGISTER_11 [3] $end
+$var wire 1 S) MapRF|REGISTER_11 [2] $end
+$var wire 1 T) MapRF|REGISTER_11 [1] $end
+$var wire 1 U) MapRF|REGISTER_11 [0] $end
+$var wire 1 V) MapRF|REGISTER_10 [8] $end
+$var wire 1 W) MapRF|REGISTER_10 [7] $end
+$var wire 1 X) MapRF|REGISTER_10 [6] $end
+$var wire 1 Y) MapRF|REGISTER_10 [5] $end
+$var wire 1 Z) MapRF|REGISTER_10 [4] $end
+$var wire 1 [) MapRF|REGISTER_10 [3] $end
+$var wire 1 \) MapRF|REGISTER_10 [2] $end
+$var wire 1 ]) MapRF|REGISTER_10 [1] $end
+$var wire 1 ^) MapRF|REGISTER_10 [0] $end
+$var wire 1 _) MapRF|REGISTER_1 [8] $end
+$var wire 1 `) MapRF|REGISTER_1 [7] $end
+$var wire 1 a) MapRF|REGISTER_1 [6] $end
+$var wire 1 b) MapRF|REGISTER_1 [5] $end
+$var wire 1 c) MapRF|REGISTER_1 [4] $end
+$var wire 1 d) MapRF|REGISTER_1 [3] $end
+$var wire 1 e) MapRF|REGISTER_1 [2] $end
+$var wire 1 f) MapRF|REGISTER_1 [1] $end
+$var wire 1 g) MapRF|REGISTER_1 [0] $end
+$var wire 1 h) MapRF|REGISTER_0 [8] $end
+$var wire 1 i) MapRF|REGISTER_0 [7] $end
+$var wire 1 j) MapRF|REGISTER_0 [6] $end
+$var wire 1 k) MapRF|REGISTER_0 [5] $end
+$var wire 1 l) MapRF|REGISTER_0 [4] $end
+$var wire 1 m) MapRF|REGISTER_0 [3] $end
+$var wire 1 n) MapRF|REGISTER_0 [2] $end
+$var wire 1 o) MapRF|REGISTER_0 [1] $end
+$var wire 1 p) MapRF|REGISTER_0 [0] $end
+$var wire 1 q) MapboxA|ExitA [8] $end
+$var wire 1 r) MapboxA|ExitA [7] $end
+$var wire 1 s) MapboxA|ExitA [6] $end
+$var wire 1 t) MapboxA|ExitA [5] $end
+$var wire 1 u) MapboxA|ExitA [4] $end
+$var wire 1 v) MapboxA|ExitA [3] $end
+$var wire 1 w) MapboxA|ExitA [2] $end
+$var wire 1 x) MapboxA|ExitA [1] $end
+$var wire 1 y) MapboxA|ExitA [0] $end
+$var wire 1 z) MapboxB|ExitB [8] $end
+$var wire 1 {) MapboxB|ExitB [7] $end
+$var wire 1 |) MapboxB|ExitB [6] $end
+$var wire 1 }) MapboxB|ExitB [5] $end
+$var wire 1 ~) MapboxB|ExitB [4] $end
+$var wire 1 !* MapboxB|ExitB [3] $end
+$var wire 1 "* MapboxB|ExitB [2] $end
+$var wire 1 #* MapboxB|ExitB [1] $end
+$var wire 1 $* MapboxB|ExitB [0] $end
+$var wire 1 %* MapAluOut|ExitAluOut [8] $end
+$var wire 1 &* MapAluOut|ExitAluOut [7] $end
+$var wire 1 '* MapAluOut|ExitAluOut [6] $end
+$var wire 1 (* MapAluOut|ExitAluOut [5] $end
+$var wire 1 )* MapAluOut|ExitAluOut [4] $end
+$var wire 1 ** MapAluOut|ExitAluOut [3] $end
+$var wire 1 +* MapAluOut|ExitAluOut [2] $end
+$var wire 1 ,* MapAluOut|ExitAluOut [1] $end
+$var wire 1 -* MapAluOut|ExitAluOut [0] $end
+$var wire 1 .* MapIR|inmediato [8] $end
+$var wire 1 /* MapIR|inmediato [7] $end
+$var wire 1 0* MapIR|inmediato [6] $end
+$var wire 1 1* MapIR|inmediato [5] $end
+$var wire 1 2* MapIR|inmediato [4] $end
+$var wire 1 3* MapIR|inmediato [3] $end
+$var wire 1 4* MapIR|inmediato [2] $end
+$var wire 1 5* MapIR|inmediato [1] $end
+$var wire 1 6* MapIR|inmediato [0] $end
+$var wire 1 7* MapIR|Rs [4] $end
+$var wire 1 8* MapIR|Rs [3] $end
+$var wire 1 9* MapIR|Rs [2] $end
+$var wire 1 :* MapIR|Rs [1] $end
+$var wire 1 ;* MapIR|Rs [0] $end
+$var wire 1 <* MapIR|Rd [4] $end
+$var wire 1 =* MapIR|Rd [3] $end
+$var wire 1 >* MapIR|Rd [2] $end
+$var wire 1 ?* MapIR|Rd [1] $end
+$var wire 1 @* MapIR|Rd [0] $end
+$var wire 1 A* instrROM~combout [21] $end
+$var wire 1 B* instrROM~combout [20] $end
+$var wire 1 C* instrROM~combout [19] $end
+$var wire 1 D* instrROM~combout [18] $end
+$var wire 1 E* instrROM~combout [17] $end
+$var wire 1 F* instrROM~combout [16] $end
+$var wire 1 G* instrROM~combout [15] $end
+$var wire 1 H* instrROM~combout [14] $end
+$var wire 1 I* instrROM~combout [13] $end
+$var wire 1 J* instrROM~combout [12] $end
+$var wire 1 K* instrROM~combout [11] $end
+$var wire 1 L* instrROM~combout [10] $end
+$var wire 1 M* instrROM~combout [9] $end
+$var wire 1 N* instrROM~combout [8] $end
+$var wire 1 O* instrROM~combout [7] $end
+$var wire 1 P* instrROM~combout [6] $end
+$var wire 1 Q* instrROM~combout [5] $end
+$var wire 1 R* instrROM~combout [4] $end
+$var wire 1 S* instrROM~combout [3] $end
+$var wire 1 T* instrROM~combout [2] $end
+$var wire 1 U* instrROM~combout [1] $end
+$var wire 1 V* instrROM~combout [0] $end
+$var wire 1 W* datoRAM~combout [8] $end
+$var wire 1 X* datoRAM~combout [7] $end
+$var wire 1 Y* datoRAM~combout [6] $end
+$var wire 1 Z* datoRAM~combout [5] $end
+$var wire 1 [* datoRAM~combout [4] $end
+$var wire 1 \* datoRAM~combout [3] $end
+$var wire 1 ]* datoRAM~combout [2] $end
+$var wire 1 ^* datoRAM~combout [1] $end
+$var wire 1 _* datoRAM~combout [0] $end
+$var wire 1 `* AluOp~combout [1] $end
+$var wire 1 a* AluOp~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+0"
+b0 #
+b0 $
+0%
+0&
+0'
+0(
+0)
+0,&
+0-&
+0.&
+0/&
+00&
+11&
+02&
+03&
+04&
+05&
+06&
+07&
+08&
+09&
+0:&
+0;&
+0<&
+0=&
+0>&
+0?&
+0@&
+0A&
+0B&
+0C&
+0D&
+0E&
+0F&
+0G&
+0H&
+0I&
+0J&
+0K&
+0L&
+0M&
+0N&
+0O&
+0P&
+0Q&
+0R&
+0S&
+0T&
+0U&
+0V&
+0W&
+0X&
+0Y&
+0Z&
+0[&
+0\&
+0]&
+0^&
+0_&
+0`&
+0a&
+0b&
+0c&
+0d&
+0e&
+0f&
+0g&
+0h&
+0i&
+0j&
+0s&
+0r&
+0q&
+0p&
+0o&
+0n&
+0m&
+0l&
+0k&
+0|&
+0{&
+0z&
+0y&
+0x&
+0w&
+0v&
+0u&
+0t&
+0''
+0&'
+0%'
+0$'
+0#'
+0"'
+0!'
+0~&
+0}&
+00'
+0/'
+0.'
+0-'
+0,'
+0+'
+0*'
+0)'
+0('
+09'
+08'
+07'
+06'
+05'
+04'
+03'
+02'
+01'
+0B'
+0A'
+0@'
+0?'
+0>'
+0='
+0<'
+0;'
+0:'
+0K'
+0J'
+0I'
+0H'
+0G'
+0F'
+0E'
+0D'
+0C'
+0T'
+0S'
+0R'
+0Q'
+0P'
+0O'
+0N'
+0M'
+0L'
+0]'
+0\'
+0['
+0Z'
+0Y'
+0X'
+0W'
+0V'
+0U'
+0f'
+0e'
+0d'
+0c'
+0b'
+0a'
+0`'
+0_'
+0^'
+0o'
+0n'
+0m'
+0l'
+0k'
+0j'
+0i'
+0h'
+0g'
+0x'
+0w'
+0v'
+0u'
+0t'
+0s'
+0r'
+0q'
+0p'
+0#(
+0"(
+0!(
+0~'
+0}'
+0|'
+0{'
+0z'
+0y'
+0,(
+0+(
+0*(
+0)(
+0((
+0'(
+0&(
+0%(
+0$(
+05(
+04(
+03(
+02(
+01(
+00(
+0/(
+0.(
+0-(
+0>(
+0=(
+0<(
+0;(
+0:(
+09(
+08(
+07(
+06(
+0G(
+0F(
+0E(
+0D(
+0C(
+0B(
+0A(
+0@(
+0?(
+0P(
+0O(
+0N(
+0M(
+0L(
+0K(
+0J(
+0I(
+0H(
+0Y(
+0X(
+0W(
+0V(
+0U(
+0T(
+0S(
+0R(
+0Q(
+0b(
+0a(
+0`(
+0_(
+0^(
+0](
+0\(
+0[(
+0Z(
+0k(
+0j(
+0i(
+0h(
+0g(
+0f(
+0e(
+0d(
+0c(
+0t(
+0s(
+0r(
+0q(
+0p(
+0o(
+0n(
+0m(
+0l(
+0}(
+0|(
+0{(
+0z(
+0y(
+0x(
+0w(
+0v(
+0u(
+0()
+0')
+0&)
+0%)
+0$)
+0#)
+0")
+0!)
+0~(
+01)
+00)
+0/)
+0.)
+0-)
+0,)
+0+)
+0*)
+0))
+0:)
+09)
+08)
+07)
+06)
+05)
+04)
+03)
+02)
+0C)
+0B)
+0A)
+0@)
+0?)
+0>)
+0=)
+0<)
+0;)
+0L)
+0K)
+0J)
+0I)
+0H)
+0G)
+0F)
+0E)
+0D)
+0U)
+0T)
+0S)
+0R)
+0Q)
+0P)
+0O)
+0N)
+0M)
+0^)
+0])
+0\)
+0[)
+0Z)
+0Y)
+0X)
+0W)
+0V)
+0g)
+0f)
+0e)
+0d)
+0c)
+0b)
+0a)
+0`)
+0_)
+0p)
+0o)
+0n)
+0m)
+0l)
+0k)
+0j)
+0i)
+0h)
+0y)
+0x)
+0w)
+0v)
+0u)
+0t)
+0s)
+0r)
+0q)
+0$*
+0#*
+0"*
+0!*
+0~)
+0})
+0|)
+0{)
+0z)
+0-*
+0,*
+0+*
+0**
+0)*
+0(*
+0'*
+0&*
+0%*
+06*
+05*
+04*
+03*
+02*
+01*
+00*
+0/*
+0.*
+0;*
+0:*
+09*
+08*
+07*
+0@*
+0?*
+0>*
+0=*
+0<*
+0V*
+0U*
+0T*
+0S*
+0R*
+0Q*
+0P*
+0O*
+0N*
+0M*
+0L*
+0K*
+0J*
+0I*
+0H*
+0G*
+0F*
+0E*
+0D*
+zC*
+zB*
+zA*
+0_*
+0^*
+0]*
+0\*
+0[*
+0Z*
+0Y*
+0X*
+0W*
+0a*
+0`*
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0q
+0p
+0o
+0n
+0m
+0l
+0k
+0j
+0i
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+x{
+0|
+1}
+x~
+1!!
+1"!
+1#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+0u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+0|!
+0}!
+0~!
+0!"
+0""
+0#"
+0$"
+0%"
+0&"
+0'"
+0("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+0/"
+00"
+01"
+02"
+03"
+04"
+05"
+06"
+07"
+08"
+09"
+0:"
+0;"
+0<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+0C"
+0D"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+0L"
+0M"
+0N"
+0O"
+0P"
+0Q"
+0R"
+0S"
+0T"
+0U"
+0V"
+0W"
+0X"
+0Y"
+0Z"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+0g"
+0h"
+0i"
+0j"
+0k"
+0l"
+0m"
+0n"
+0o"
+0p"
+0q"
+0r"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+0y"
+0z"
+0{"
+0|"
+0}"
+0~"
+0!#
+0"#
+0##
+0$#
+0%#
+0&#
+0'#
+0(#
+0)#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+02#
+03#
+04#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+0>#
+0?#
+0@#
+0A#
+0B#
+0C#
+0D#
+0E#
+0F#
+0G#
+0H#
+0I#
+0J#
+1K#
+0L#
+0M#
+0N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+0W#
+0X#
+0Y#
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+0b#
+0c#
+0d#
+0e#
+0f#
+0g#
+0h#
+0i#
+0j#
+0k#
+0l#
+0m#
+0n#
+0o#
+0p#
+0q#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+0x#
+0y#
+0z#
+0{#
+0|#
+0}#
+0~#
+0!$
+0"$
+0#$
+0$$
+0%$
+0&$
+0'$
+0($
+0)$
+0*$
+0+$
+0,$
+0-$
+0.$
+0/$
+00$
+01$
+02$
+03$
+04$
+05$
+06$
+07$
+08$
+09$
+0:$
+0;$
+0<$
+0=$
+0>$
+0?$
+0@$
+0A$
+0B$
+0C$
+0D$
+0E$
+0F$
+0G$
+0H$
+0I$
+0J$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+0\$
+0]$
+0^$
+0_$
+1`$
+0a$
+0b$
+0c$
+0d$
+0e$
+0f$
+0g$
+0h$
+0i$
+0j$
+0k$
+0l$
+0m$
+0n$
+0o$
+0p$
+0q$
+0r$
+0s$
+0t$
+0u$
+0v$
+0w$
+0x$
+0y$
+0z$
+0{$
+0|$
+0}$
+0~$
+0!%
+0"%
+0#%
+0$%
+0%%
+0&%
+0'%
+0(%
+0)%
+0*%
+0+%
+0,%
+0-%
+0.%
+1/%
+00%
+01%
+02%
+03%
+04%
+05%
+06%
+07%
+08%
+09%
+0:%
+0;%
+0<%
+0=%
+0>%
+0?%
+0@%
+0A%
+0B%
+0C%
+0D%
+0E%
+0F%
+0G%
+0H%
+0I%
+0J%
+0K%
+0L%
+0M%
+0N%
+0O%
+0P%
+0Q%
+0R%
+0S%
+0T%
+0U%
+0V%
+0W%
+0X%
+0Y%
+0Z%
+0[%
+0\%
+0]%
+0^%
+0_%
+0`%
+0a%
+0b%
+0c%
+0d%
+0e%
+0f%
+0g%
+0h%
+0i%
+0j%
+0k%
+0l%
+0m%
+0n%
+0o%
+0p%
+0q%
+0r%
+0s%
+0t%
+0u%
+0v%
+0w%
+0x%
+0y%
+0z%
+0{%
+0|%
+0}%
+0~%
+0!&
+0"&
+0#&
+0$&
+0%&
+0&&
+0'&
+0(&
+0)&
+0*&
+0+&
+$end
+#10000
+1"
+b1000000000000000 $
+b1100000000000000 $
+b1100000000000001 $
+1^&
+1V*
+1H*
+1G*
+1_&
+0{
+1c!
+1f!
+#20000
+0"
+0^&
+0_&
+1{
+#30000
+1'
+1"
+1b!
+1^&
+1_&
+0{
+1@*
+1?*
+16*
+1Y&
+1W&
+1T&
+1R&
+1N&
+1-&
+1#&
+1~%
+1|%
+1\%
+1Z%
+1X%
+1U%
+1M%
+1+%
+1~$
+1{$
+1Z$
+1P$
+1C$
+1A$
+1?$
+1<$
+18$
+1E#
+1:#
+1/#
+1%#
+1<"
+1~!
+1U!
+1O!
+1N!
+1V
+#40000
+0"
+0^&
+0_&
+1{
+#50000
+0'
+1"
+0b!
+1^&
+1_&
+0{
+#60000
+0"
+0^&
+0_&
+1{
+#70000
+1%
+1&
+1"
+1d!
+1B"
+1^&
+1_&
+0{
+1?"
+1@"
+1q
+1A"
+1_
+#80000
+0"
+0^&
+0_&
+1{
+1-*
+1h
+#90000
+1(
+1)
+0%
+0&
+1"
+1C"
+1g!
+0d!
+0B"
+1^&
+1_&
+0{
+1D"
+1n!
+0?"
+1V"
+15"
+11"
+1e!
+1W!
+1W"
+0@"
+1z
+0q
+0A"
+0_
+#100000
+0"
+0^&
+0_&
+1{
+1]'
+1?!
+1@!
+1!"
+1>"
+1M
+#110000
+0(
+0)
+1"
+0C"
+0g!
+1^&
+1_&
+0{
+0D"
+0n!
+0V"
+05"
+01"
+0e!
+0W!
+0W"
+0z
+1$*
+1?"
+1;
+1@"
+1q
+1A"
+1_
+#120000
+b1001100000000000001 $
+b1101100000000000001 $
+b1101100010000000001 $
+b1101100011000000001 $
+b1101100011000000011 $
+b1100100011000000011 $
+b1100100011000000010 $
+0"
+0V*
+1U*
+1M*
+1L*
+0G*
+1E*
+1D*
+0^&
+0_&
+1{
+0c!
+#130000
+1"
+1^&
+1_&
+0{
+#140000
+0"
+0^&
+0_&
+1{
+#150000
+1'
+1"
+1b!
+1^&
+1_&
+0{
+15*
+1:*
+1;*
+1=*
+1<*
+0?*
+06*
+1E&
+1:&
+17&
+15&
+1w%
+1i%
+1f%
+1A%
+1?%
+1=%
+19%
+1x$
+1l$
+1j$
+1g$
+1e$
+1/$
+1#$
+1!$
+1}#
+1w#
+1t#
+1r#
+1m#
+1_#
+1]#
+1[#
+1X#
+1V#
+1t"
+1j"
+1e"
+1a"
+1X"
+1T"
+1Q"
+1L"
+1<!
+18!
+17!
+15!
+11!
+1-!
+1)!
+1%!
+0?!
+0>"
+0Y&
+0W&
+1U&
+0T&
+1S&
+0R&
+0N&
+1.&
+0-&
+1$&
+0#&
+0~%
+1}%
+0|%
+0\%
+0Z%
+1Y%
+0X%
+1V%
+0U%
+0M%
+1,%
+0+%
+0~$
+1}$
+1|$
+0{$
+1[$
+0Z$
+0P$
+1D$
+0C$
+0A$
+1@$
+0?$
+0<$
+1;$
+08$
+0E#
+1;#
+0:#
+0/#
+1&#
+0%#
+0<"
+0~!
+0U!
+0O!
+0N!
+1U
+0V
+1Y"
+0@!
+0U&
+0S&
+1/&
+0.&
+1%&
+0$&
+0}%
+0Y%
+0V%
+1-%
+0,%
+1#%
+0|$
+0[$
+0D$
+1F$
+0@$
+1G$
+0;$
+0;#
+0&#
+0!"
+0}$
+0M
+1Z"
+0/&
+0%&
+0-%
+0#%
+0G$
+0F$
+1H$
+1E
+1G
+1I
+1["
+0H$
+0E
+0G
+0I
+1\"
+1`&
+1D
+#160000
+0"
+0^&
+0_&
+1{
+#170000
+0'
+1"
+0b!
+1^&
+1_&
+0{
+1y)
+0$*
+1J#
+0@"
+0?"
+12
+0;
+1d&
+0A"
+0J#
+1@"
+0q
+1e&
+0d&
+1A"
+0_
+0e&
+1^
+1_
+0^
+#180000
+0"
+0^&
+0_&
+1{
+#190000
+1%
+1&
+1"
+1d!
+1B"
+1^&
+1_&
+0{
+1I#
+1d&
+1p
+1e&
+1^
+#200000
+0"
+0^&
+0_&
+1{
+1,*
+1g
+#210000
+1(
+1)
+0%
+0&
+1"
+1C"
+1g!
+0d!
+0B"
+1^&
+1_&
+0{
+1]"
+1D"
+1$"
+0I#
+1C#
+15#
+1r"
+1p"
+1o"
+1i"
+1h"
+1b"
+1`"
+1_"
+1^"
+1X!
+1V"
+15"
+11"
+1e!
+1W!
+1%"
+0d&
+1y
+1z
+0p
+0e&
+0^
+#220000
+0"
+0^&
+0_&
+1{
+1,(
+1+(
+1("
+1<#
+1)"
+1=#
+1="
+1F#
+1>"
+1G#
+1H#
+1M
+1L
+#230000
+0(
+0)
+1"
+0C"
+0g!
+1^&
+1_&
+0{
+0]"
+0D"
+0$"
+0C#
+05#
+0r"
+0p"
+0o"
+0i"
+0h"
+0b"
+0`"
+0_"
+0^"
+0X!
+0V"
+05"
+01"
+0e!
+0W!
+0%"
+0y
+0z
+1#*
+1$*
+1I#
+1?"
+1:
+1;
+1d&
+1J#
+0@"
+1p
+1q
+1e&
+0K#
+0d&
+0A"
+1L#
+0e&
+1^
+0_
+1M#
+0^
+1]
+#240000
+0"
+0^&
+0_&
+1{
+#250000
+b1100110011000000010 $
+b1100111011000000010 $
+b1100011011000000010 $
+b100011011000000010 $
+b11011000000010 $
+b11001000000010 $
+b11001000000000 $
+1"
+0U*
+0L*
+1J*
+1I*
+0H*
+0E*
+0D*
+1^&
+1_&
+0{
+0f!
+#260000
+0"
+0^&
+0_&
+1{
+#270000
+1'
+1"
+1b!
+1^&
+1_&
+0{
+05*
+0:*
+18*
+0=*
+0<*
+0@*
+17*
+1F&
+0E&
+1;&
+0:&
+07&
+16&
+05&
+0w%
+1l%
+0i%
+1h%
+0f%
+0A%
+1@%
+0?%
+1>%
+0=%
+1<%
+09%
+0x$
+0l$
+0j$
+1h$
+0g$
+1f$
+0e$
+10$
+0/$
+0#$
+1"$
+0!$
+1~#
+0}#
+0w#
+0t#
+1s#
+0r#
+0m#
+0_#
+1^#
+0]#
+1\#
+0[#
+0X#
+1W#
+0V#
+0t"
+1k"
+0j"
+0e"
+0a"
+0X"
+0T"
+0Q"
+1O"
+0L"
+0<!
+08!
+07!
+05!
+01!
+1.!
+0-!
+1*!
+0)!
+1&!
+0%!
+0["
+0Z"
+1I"
+1'!
+0<#
+0("
+1?!
+0G#
+0>"
+0F#
+0="
+0\"
+0U
+1G&
+0F&
+0;&
+1=&
+06&
+0h%
+0@%
+1D%
+0>%
+1E%
+0<%
+0h$
+0f$
+11$
+00$
+0"$
+1&$
+0~#
+0s#
+0^#
+1b#
+0\#
+1c#
+0W#
+0k"
+0Y"
+1\"
+0O"
+0l%
+0.!
+0*!
+1["
+0&!
+1L"
+1(!
+0=#
+0)"
+1@!
+0H#
+0`&
+0L
+0M
+0D
+1z%
+0G&
+0=&
+0E%
+0D%
+01$
+0&$
+0c#
+0b#
+1`&
+0\"
+0["
+1O"
+1w"
+1<
+1>
+1@
+1B
+1D
+0z%
+0`&
+1\"
+1x"
+0<
+0>
+0@
+0B
+0D
+1`&
+1a&
+1D
+1C
+#280000
+0"
+0^&
+0_&
+1{
+#290000
+0'
+1"
+0b!
+1^&
+1_&
+0{
+1x)
+0#*
+0$*
+1d&
+0I#
+0?"
+11
+0:
+0;
+1e&
+0d&
+0J#
+1@"
+0p
+0q
+0e&
+1K#
+1d&
+1A"
+1^
+0L#
+1e&
+0^
+1_
+0M#
+1^
+0]
+#300000
+0"
+0^&
+0_&
+1{
+#310000
+1"
+1^&
+1_&
+0{
+#320000
+0"
+0^&
+0_&
+1{
+#330000
+1"
+1^&
+1_&
+0{
+#340000
+0"
+0^&
+0_&
+1{
+#350000
+1"
+1^&
+1_&
+0{
+#360000
+0"
+0^&
+0_&
+1{
+#370000
+1"
+1^&
+1_&
+0{
+#380000
+b11000000000000 $
+b1000000000000 $
+b0 $
+0"
+0M*
+0J*
+0I*
+0^&
+0_&
+1{
+#390000
+1"
+1^&
+1_&
+0{
+#400000
+0"
+0^&
+0_&
+1{
+#410000
+1"
+1^&
+1_&
+0{
+#420000
+0"
+0^&
+0_&
+1{
+#430000
+1"
+1^&
+1_&
+0{
+#440000
+0"
+0^&
+0_&
+1{
+#450000
+1"
+1^&
+1_&
+0{
+#460000
+0"
+0^&
+0_&
+1{
+#470000
+1"
+1^&
+1_&
+0{
+#480000
+0"
+0^&
+0_&
+1{
+#490000
+1"
+1^&
+1_&
+0{
+#500000
+0"
+0^&
+0_&
+1{
+#510000
+1"
+1^&
+1_&
+0{
+#520000
+0"
+0^&
+0_&
+1{
+#530000
+1"
+1^&
+1_&
+0{
+#540000
+0"
+0^&
+0_&
+1{
+#550000
+1"
+1^&
+1_&
+0{
+#560000
+0"
+0^&
+0_&
+1{
+#570000
+1"
+1^&
+1_&
+0{
+#580000
+0"
+0^&
+0_&
+1{
+#590000
+1"
+1^&
+1_&
+0{
+#600000
+0"
+0^&
+0_&
+1{
+#610000
+1"
+1^&
+1_&
+0{
+#620000
+0"
+0^&
+0_&
+1{
+#630000
+1"
+1^&
+1_&
+0{
+#640000
+0"
+0^&
+0_&
+1{
+#650000
+1"
+1^&
+1_&
+0{
+#660000
+0"
+0^&
+0_&
+1{
+#670000
+1"
+1^&
+1_&
+0{
+#680000
+0"
+0^&
+0_&
+1{
+#690000
+1"
+1^&
+1_&
+0{
+#700000
+0"
+0^&
+0_&
+1{
+#710000
+1"
+1^&
+1_&
+0{
+#720000
+0"
+0^&
+0_&
+1{
+#730000
+1"
+1^&
+1_&
+0{
+#740000
+0"
+0^&
+0_&
+1{
+#750000
+1"
+1^&
+1_&
+0{
+#760000
+0"
+0^&
+0_&
+1{
+#770000
+1"
+1^&
+1_&
+0{
+#780000
+0"
+0^&
+0_&
+1{
+#790000
+1"
+1^&
+1_&
+0{
+#800000
+0"
+0^&
+0_&
+1{
+#810000
+1"
+1^&
+1_&
+0{
+#820000
+0"
+0^&
+0_&
+1{
+#830000
+1"
+1^&
+1_&
+0{
+#840000
+0"
+0^&
+0_&
+1{
+#850000
+1"
+1^&
+1_&
+0{
+#860000
+0"
+0^&
+0_&
+1{
+#870000
+1"
+1^&
+1_&
+0{
+#880000
+0"
+0^&
+0_&
+1{
+#890000
+1"
+1^&
+1_&
+0{
+#900000
+0"
+0^&
+0_&
+1{
+#910000
+1"
+1^&
+1_&
+0{
+#920000
+0"
+0^&
+0_&
+1{
+#930000
+1"
+1^&
+1_&
+0{
+#940000
+0"
+0^&
+0_&
+1{
+#950000
+1"
+1^&
+1_&
+0{
+#960000
+0"
+0^&
+0_&
+1{
+#970000
+1"
+1^&
+1_&
+0{
+#980000
+0"
+0^&
+0_&
+1{
+#990000
+1"
+1^&
+1_&
+0{
+#1000000

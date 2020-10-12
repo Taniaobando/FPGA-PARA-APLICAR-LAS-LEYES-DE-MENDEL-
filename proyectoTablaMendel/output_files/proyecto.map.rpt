@@ -1,0 +1,661 @@
+Analysis & Synthesis report for proyecto
+Sun Nov 25 23:55:51 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 13. Parameter Settings for User Entity Instance: muxPCSource:MapMuxpcsource
+ 14. Parameter Settings for User Entity Instance: RF:MapRF
+ 15. Parameter Settings for User Entity Instance: boxA:MapboxA
+ 16. Parameter Settings for User Entity Instance: boxB:MapboxB
+ 17. Parameter Settings for User Entity Instance: muxAluSrcB:MapAluSrcB
+ 18. Parameter Settings for User Entity Instance: ALU:MapALU
+ 19. Parameter Settings for User Entity Instance: AluOut:MapAluOut
+ 20. Parameter Settings for User Entity Instance: muxMemToReg:MapMemToReg
+ 21. Parameter Settings for User Entity Instance: muxMemSource:MapmuxRam
+ 22. Port Connectivity Checks: "programCounter:MapPc"
+ 23. Port Connectivity Checks: "UnidadControl:MapUnidadControl"
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 25 23:55:51 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; proyecto                                        ;
+; Top-level Entity Name              ; main                                            ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 1,542                                           ;
+;     Total combinational functions  ; 1,158                                           ;
+;     Dedicated logic registers      ; 471                                             ;
+; Total registers                    ; 471                                             ;
+; Total pins                         ; 175                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; main               ; proyecto           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; main.vhd                         ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/main.vhd           ;         ;
+; RF.vhd                           ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/RF.vhd             ;         ;
+; boxA.vhd                         ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/boxA.vhd           ;         ;
+; boxB.vhd                         ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/boxB.vhd           ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/ALU.vhd            ;         ;
+; muxAluSrcB.vhd                   ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/muxAluSrcB.vhd     ;         ;
+; AluOut.vhd                       ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/AluOut.vhd         ;         ;
+; muxMemToReg.vhd                  ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/muxMemToReg.vhd    ;         ;
+; ir.vhd                           ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/ir.vhd             ;         ;
+; ram.vhd                          ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/ram.vhd            ;         ;
+; programCounter.vhd               ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/programCounter.vhd ;         ;
+; rom.vhd                          ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/rom.vhd            ;         ;
+; sumadorPC.vhd                    ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/sumadorPC.vhd      ;         ;
+; muxPCSource.vhd                  ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/muxPCSource.vhd    ;         ;
+; GateOrPCWrite.vhd                ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/GateOrPCWrite.vhd  ;         ;
+; GateOr.vhd                       ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/GateOr.vhd         ;         ;
+; GateAndSt.vhd                    ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/GateAndSt.vhd      ;         ;
+; GateAndEq.vhd                    ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/GateAndEq.vhd      ;         ;
+; muxMemSource.vhd                 ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/muxMemSource.vhd   ;         ;
+; inUnity.vhd                      ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/inUnity.vhd        ;         ;
+; outUnity.vhd                     ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/outUnity.vhd       ;         ;
+; UnidadControl.vhd                ; yes             ; User VHDL File  ; C:/VHDL/ProyectoFinalYes/proyectoTablaMendel/UnidadControl.vhd  ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 1,542 ;
+;                                             ;       ;
+; Total combinational functions               ; 1158  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 975   ;
+;     -- 3 input functions                    ; 141   ;
+;     -- <=2 input functions                  ; 42    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1142  ;
+;     -- arithmetic mode                      ; 16    ;
+;                                             ;       ;
+; Total registers                             ; 471   ;
+;     -- Dedicated logic registers            ; 471   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 175   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; Clock ;
+; Maximum fan-out                             ; 471   ;
+; Total fan-out                               ; 5967  ;
+; Average fan-out                             ; 3.31  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; |main                               ; 1158 (0)          ; 471 (0)      ; 0           ; 0            ; 0       ; 0         ; 175  ; 0            ; |main                                ; work         ;
+;    |ALU:MapALU|                     ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ALU:MapALU                     ; work         ;
+;    |AluOut:MapAluOut|               ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|AluOut:MapAluOut               ; work         ;
+;    |GateAndEq:MapAndJeq|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|GateAndEq:MapAndJeq            ; work         ;
+;    |GateOrPCWrite:MapOrPc|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|GateOrPCWrite:MapOrPc          ; work         ;
+;    |RF:MapRF|                       ; 418 (418)         ; 288 (288)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|RF:MapRF                       ; work         ;
+;    |UnidadControl:MapUnidadControl| ; 34 (34)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|UnidadControl:MapUnidadControl ; work         ;
+;    |boxA:MapboxA|                   ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|boxA:MapboxA                   ; work         ;
+;    |boxB:MapboxB|                   ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|boxB:MapboxB                   ; work         ;
+;    |ir:MapIR|                       ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ir:MapIR                       ; work         ;
+;    |muxAluSrcB:MapAluSrcB|          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|muxAluSrcB:MapAluSrcB          ; work         ;
+;    |muxMemSource:MapmuxRam|         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|muxMemSource:MapmuxRam         ; work         ;
+;    |muxMemToReg:MapMemToReg|        ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|muxMemToReg:MapMemToReg        ; work         ;
+;    |outUnity:MapOut|                ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|outUnity:MapOut                ; work         ;
+;    |programCounter:MapPc|           ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|programCounter:MapPc           ; work         ;
+;    |ram:MapRam|                     ; 96 (96)           ; 121 (121)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ram:MapRam                     ; work         ;
+;    |rom:MapRom|                     ; 512 (512)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|rom:MapRom                     ; work         ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                ;
++----------------------------------------------------+--------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                  ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------------+------------------------+
+; UnidadControl:MapUnidadControl|EstadoSig[0]        ; UnidadControl:MapUnidadControl|Mux19 ; yes                    ;
+; UnidadControl:MapUnidadControl|EstadoSig[1]        ; UnidadControl:MapUnidadControl|Mux19 ; yes                    ;
+; UnidadControl:MapUnidadControl|EstadoSig[2]        ; UnidadControl:MapUnidadControl|Mux19 ; yes                    ;
+; UnidadControl:MapUnidadControl|EstadoSig[3]        ; UnidadControl:MapUnidadControl|Mux19 ; yes                    ;
+; UnidadControl:MapUnidadControl|enAlu               ; UnidadControl:MapUnidadControl|Mux0  ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                                      ;                        ;
++----------------------------------------------------+--------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; ram:MapRam|data_out[7,8]              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 471   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 440   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|muxMemSource:MapmuxRam|salidaMuxMemSource[1] ;
+; 32:1               ; 9 bits    ; 189 LEs       ; 189 LEs              ; 0 LEs                  ; No         ; |main|RF:MapRF|Mux293                              ;
+; 32:1               ; 9 bits    ; 189 LEs       ; 189 LEs              ; 0 LEs                  ; No         ; |main|RF:MapRF|Mux303                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |main ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; BusDatos       ; 8     ; Signed Integer                              ;
+; BusRegister    ; 4     ; Signed Integer                              ;
+; BusRam         ; 6     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxPCSource:MapMuxpcsource ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; nmuxpc         ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RF:MapRF ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; buse           ; 8     ; Signed Integer               ;
+; busrf          ; 4     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: boxA:MapboxA ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; na             ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: boxB:MapboxB ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; nb             ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxAluSrcB:MapAluSrcB ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; nalub          ; 8     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:MapALU ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; wbus           ; 8     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AluOut:MapAluOut ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; nalu           ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxMemToReg:MapMemToReg ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; nm             ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxMemSource:MapmuxRam ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; nmems          ; 6     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "programCounter:MapPc" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; rst  ; Input ; Info     ; Stuck at VCC           ;
++------+-------+----------+------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "UnidadControl:MapUnidadControl" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; rst  ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Nov 25 23:55:38 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proyecto -c proyecto
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
+    Info (12022): Found design unit 1: main-main_arch
+    Info (12023): Found entity 1: main
+Info (12021): Found 2 design units, including 1 entities, in source file rf.vhd
+    Info (12022): Found design unit 1: RF-RF_arch
+    Info (12023): Found entity 1: RF
+Info (12021): Found 2 design units, including 1 entities, in source file boxa.vhd
+    Info (12022): Found design unit 1: boxA-boxA_arch
+    Info (12023): Found entity 1: boxA
+Info (12021): Found 2 design units, including 1 entities, in source file boxb.vhd
+    Info (12022): Found design unit 1: boxB-boxB_arch
+    Info (12023): Found entity 1: boxB
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-alu_arc
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 2 design units, including 1 entities, in source file muxalusrcb.vhd
+    Info (12022): Found design unit 1: muxAluSrcB-muxAluSrcB_arch
+    Info (12023): Found entity 1: muxAluSrcB
+Info (12021): Found 2 design units, including 1 entities, in source file aluout.vhd
+    Info (12022): Found design unit 1: AluOut-AluOut_arch
+    Info (12023): Found entity 1: AluOut
+Info (12021): Found 2 design units, including 1 entities, in source file muxmemtoreg.vhd
+    Info (12022): Found design unit 1: muxMemToReg-muxMemToReg_arch
+    Info (12023): Found entity 1: muxMemToReg
+Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
+    Info (12022): Found design unit 1: ir-ir_arc
+    Info (12023): Found entity 1: ir
+Warning (10335): Unrecognized synthesis attribute "ram_style" at ram.vhd(33)
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-ram_arc
+    Info (12023): Found entity 1: ram
+Info (12021): Found 2 design units, including 1 entities, in source file programcounter.vhd
+    Info (12022): Found design unit 1: programCounter-programCounter_arch
+    Info (12023): Found entity 1: programCounter
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: rom-rom_arc
+    Info (12023): Found entity 1: rom
+Info (12021): Found 2 design units, including 1 entities, in source file sumadorpc.vhd
+    Info (12022): Found design unit 1: sumadorPC-arc_sumadorPC
+    Info (12023): Found entity 1: sumadorPC
+Info (12021): Found 2 design units, including 1 entities, in source file muxpcsource.vhd
+    Info (12022): Found design unit 1: muxPCSource-muxPCSource_arch
+    Info (12023): Found entity 1: muxPCSource
+Info (12021): Found 2 design units, including 1 entities, in source file gateorpcwrite.vhd
+    Info (12022): Found design unit 1: GateOrPCWrite-GateOrPCWrite_arch
+    Info (12023): Found entity 1: GateOrPCWrite
+Info (12021): Found 2 design units, including 1 entities, in source file gateor.vhd
+    Info (12022): Found design unit 1: GateOr-GateOr_arch
+    Info (12023): Found entity 1: GateOr
+Info (12021): Found 2 design units, including 1 entities, in source file gateandst.vhd
+    Info (12022): Found design unit 1: GateAndSt-GateAndSt_arch
+    Info (12023): Found entity 1: GateAndSt
+Info (12021): Found 2 design units, including 1 entities, in source file gateandeq.vhd
+    Info (12022): Found design unit 1: GateAndEq-GateAndEq_arch
+    Info (12023): Found entity 1: GateAndEq
+Info (12021): Found 2 design units, including 1 entities, in source file muxmemsource.vhd
+    Info (12022): Found design unit 1: muxMemSource-muxMemSource_arch
+    Info (12023): Found entity 1: muxMemSource
+Info (12021): Found 2 design units, including 1 entities, in source file inunity.vhd
+    Info (12022): Found design unit 1: inUnity-inUnity_arc
+    Info (12023): Found entity 1: inUnity
+Info (12021): Found 2 design units, including 1 entities, in source file outunity.vhd
+    Info (12022): Found design unit 1: outUnity-outUnity_arc
+    Info (12023): Found entity 1: outUnity
+Info (12021): Found 2 design units, including 1 entities, in source file unidadcontrol.vhd
+    Info (12022): Found design unit 1: UnidadControl-UnidadControl_arch
+    Info (12023): Found entity 1: UnidadControl
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at main.vhd(50): used explicit default value for signal "seg0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at main.vhd(318): used explicit default value for signal "reset" because signal was never assigned a value
+Info (12128): Elaborating entity "UnidadControl" for hierarchy "UnidadControl:MapUnidadControl"
+Warning (10492): VHDL Process Statement warning at UnidadControl.vhd(44): signal "EstadoAc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at UnidadControl.vhd(56): inferring latch(es) for signal or variable "EstadoSig", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at UnidadControl.vhd(56): inferring latch(es) for signal or variable "enAlu", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "enAlu" at UnidadControl.vhd(56)
+Info (10041): Inferred latch for "EstadoSig[0]" at UnidadControl.vhd(56)
+Info (10041): Inferred latch for "EstadoSig[1]" at UnidadControl.vhd(56)
+Info (10041): Inferred latch for "EstadoSig[2]" at UnidadControl.vhd(56)
+Info (10041): Inferred latch for "EstadoSig[3]" at UnidadControl.vhd(56)
+Info (12128): Elaborating entity "GateOrPCWrite" for hierarchy "GateOrPCWrite:MapOrPc"
+Info (12128): Elaborating entity "GateAndEq" for hierarchy "GateAndEq:MapAndJeq"
+Info (12128): Elaborating entity "GateAndSt" for hierarchy "GateAndSt:MapAndJst"
+Info (12128): Elaborating entity "GateOr" for hierarchy "GateOr:MapOr"
+Info (12128): Elaborating entity "muxPCSource" for hierarchy "muxPCSource:MapMuxpcsource"
+Warning (10492): VHDL Process Statement warning at muxPCSource.vhd(34): signal "pc_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at muxPCSource.vhd(36): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "sumadorPC" for hierarchy "sumadorPC:MapSumador"
+Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:MapPc"
+Info (12128): Elaborating entity "rom" for hierarchy "rom:MapRom"
+Warning (10492): VHDL Process Statement warning at rom.vhd(322): signal "reg_address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "RF" for hierarchy "RF:MapRF"
+Warning (10492): VHDL Process Statement warning at RF.vhd(150): signal "RsD" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(152): signal "REGISTER_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(154): signal "REGISTER_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(156): signal "REGISTER_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(158): signal "REGISTER_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(160): signal "REGISTER_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(162): signal "REGISTER_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(164): signal "REGISTER_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(166): signal "REGISTER_7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(168): signal "REGISTER_8" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(170): signal "REGISTER_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(172): signal "REGISTER_10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(174): signal "REGISTER_11" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(176): signal "REGISTER_12" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(178): signal "REGISTER_13" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(180): signal "REGISTER_14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(182): signal "REGISTER_15" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(184): signal "REGISTER_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(186): signal "REGISTER_17" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(188): signal "REGISTER_18" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(190): signal "REGISTER_19" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(192): signal "REGISTER_20" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(194): signal "REGISTER_21" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(196): signal "REGISTER_22" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(198): signal "REGISTER_23" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(200): signal "REGISTER_24" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(202): signal "REGISTER_25" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(204): signal "REGISTER_26" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(206): signal "REGISTER_27" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(208): signal "REGISTER_28" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(210): signal "REGISTER_29" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(212): signal "REGISTER_30" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(214): signal "REGISTER_31" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(218): signal "RdD" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(220): signal "REGISTER_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(222): signal "REGISTER_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(224): signal "REGISTER_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(226): signal "REGISTER_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(228): signal "REGISTER_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(230): signal "REGISTER_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(232): signal "REGISTER_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(234): signal "REGISTER_7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(236): signal "REGISTER_8" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(238): signal "REGISTER_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(240): signal "REGISTER_10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(242): signal "REGISTER_11" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(244): signal "REGISTER_12" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(246): signal "REGISTER_13" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(248): signal "REGISTER_14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(250): signal "REGISTER_15" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(252): signal "REGISTER_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(254): signal "REGISTER_17" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(256): signal "REGISTER_18" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(258): signal "REGISTER_19" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(260): signal "REGISTER_20" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(262): signal "REGISTER_21" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(264): signal "REGISTER_22" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(266): signal "REGISTER_23" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(268): signal "REGISTER_24" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(270): signal "REGISTER_25" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(272): signal "REGISTER_26" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(274): signal "REGISTER_27" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(276): signal "REGISTER_28" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(278): signal "REGISTER_29" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(280): signal "REGISTER_30" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RF.vhd(282): signal "REGISTER_31" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "boxA" for hierarchy "boxA:MapboxA"
+Info (12128): Elaborating entity "boxB" for hierarchy "boxB:MapboxB"
+Info (12128): Elaborating entity "muxAluSrcB" for hierarchy "muxAluSrcB:MapAluSrcB"
+Warning (10492): VHDL Process Statement warning at muxAluSrcB.vhd(36): signal "DataB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at muxAluSrcB.vhd(38): signal "Cte" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:MapALU"
+Info (12128): Elaborating entity "AluOut" for hierarchy "AluOut:MapAluOut"
+Info (12128): Elaborating entity "muxMemToReg" for hierarchy "muxMemToReg:MapMemToReg"
+Warning (10492): VHDL Process Statement warning at muxMemToReg.vhd(35): signal "DataMem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at muxMemToReg.vhd(37): signal "regmem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ir" for hierarchy "ir:MapIR"
+Info (12128): Elaborating entity "ram" for hierarchy "ram:MapRam"
+Info (12128): Elaborating entity "muxMemSource" for hierarchy "muxMemSource:MapmuxRam"
+Warning (10492): VHDL Process Statement warning at muxMemSource.vhd(36): signal "Entry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at muxMemSource.vhd(38): signal "DataB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "inUnity" for hierarchy "inUnity:MapIn"
+Warning (10492): VHDL Process Statement warning at inUnity.vhd(36): signal "switch1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at inUnity.vhd(36): signal "switch2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "outUnity" for hierarchy "outUnity:MapOut"
+Warning (10036): Verilog HDL or VHDL warning at outUnity.vhd(30): object "Dataa" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at outUnity.vhd(36): signal "OutS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "ram:MapRam|my_ram" is uninferred due to inappropriate RAM size
+Warning (13012): Latch UnidadControl:MapUnidadControl|EstadoSig[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadControl:MapUnidadControl|EstadoAc[2]
+Warning (13012): Latch UnidadControl:MapUnidadControl|EstadoSig[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadControl:MapUnidadControl|EstadoAc[2]
+Warning (13012): Latch UnidadControl:MapUnidadControl|EstadoSig[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadControl:MapUnidadControl|EstadoAc[2]
+Warning (13012): Latch UnidadControl:MapUnidadControl|EstadoSig[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadControl:MapUnidadControl|EstadoAc[2]
+Warning (13012): Latch UnidadControl:MapUnidadControl|enAlu has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal UnidadControl:MapUnidadControl|EstadoAc[3]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "salidaRam[7]" is stuck at GND
+    Warning (13410): Pin "salidaRam[8]" is stuck at GND
+    Warning (13410): Pin "seg0[0]" is stuck at GND
+    Warning (13410): Pin "seg0[1]" is stuck at GND
+    Warning (13410): Pin "seg0[2]" is stuck at GND
+    Warning (13410): Pin "seg0[3]" is stuck at GND
+    Warning (13410): Pin "seg0[4]" is stuck at GND
+    Warning (13410): Pin "seg0[5]" is stuck at GND
+    Warning (13410): Pin "seg0[6]" is stuck at GND
+    Warning (13410): Pin "SignalReset" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1787 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 171 output pins
+    Info (21061): Implemented 1612 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 4673 megabytes
+    Info: Processing ended: Sun Nov 25 23:55:51 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:10
+
+

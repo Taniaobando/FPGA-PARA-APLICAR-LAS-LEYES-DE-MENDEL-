@@ -1,0 +1,41 @@
+-----------------------------
+--Actividad: Temporal de la ALU
+--Autor(as): Laura Arango,Andres Salazar, Tania Obando, Verónica Tofiño.
+--Fecha:15/11/2018
+--Curso:Arquitectura del computador II
+--
+--archivo: AluOut.vhd
+-----------------------------
+--Descripcion: Temporal para guardar el resultado de la ALU
+-----------------------------
+--Cambios: Se añadió esta entrada.
+-----------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
+
+entity AluOut is
+	generic(
+		NAlu: natural := 8 --Bus de Datos
+	);
+
+	port( 
+		AluOutOp: in std_logic_vector(NAlu downto 0); -- Resultado de la ALU
+		ExitAluOut: out std_logic_Vector(NAlu downto 0); --Salida del dato guardado
+		EnableAlu : in std_logic;
+		Clk : in std_logic
+	);
+end entity;
+
+architecture AluOut_arch of AluOut is
+begin
+	process (Clk) is
+	begin 
+		if (falling_edge (Clk)) then 
+				if (EnableAlu = '1') then
+					ExitAluOut<= AluOutOp;
+				end if;
+		end if;
+	end process;
+end architecture; 

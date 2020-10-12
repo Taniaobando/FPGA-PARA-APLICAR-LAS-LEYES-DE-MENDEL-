@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\VHDL\TablaMendelF (DepurandoF)\RFPrueba\simulation\qsim
+vmain
+Z1 !s100 [ljPEJkLaPZcBE<U;Y_7i2
+Z2 I8e6[TT[@iKDO=faB=TY`B1
+Z3 VMWBIFna^^8@aKg`[Wb:kO0
+Z4 dC:\VHDL\ProyectoFinalYes\proyectoTablaMendel\simulation\qsim
+Z5 w1543208274
+Z6 8proyecto.vo
+Z7 Fproyecto.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|proyecto.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1543208275.786000
+Z12 !s107 proyecto.vo|
+!s101 -O0
+vmain_vlg_check_tst
+!i10b 1
+Z13 !s100 Vzk`K[XWfJ:DFT<Hg;D?F0
+Z14 IDm:i7U[f[TK]fZZ1Q2TO10
+Z15 VDXiDlSB8e273=G=CP?=Uf2
+R4
+Z16 w1543208273
+Z17 8proyecto.vt
+Z18 Fproyecto.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1543208276.133000
+Z20 !s107 proyecto.vt|
+Z21 !s90 -work|work|proyecto.vt|
+!s101 -O0
+R10
+vmain_vlg_sample_tst
+!i10b 1
+Z22 !s100 A^TTA@O1VbH>Y<nIbXTk63
+Z23 I^EDR7mm02H:QabEdD^Y2P1
+Z24 V:g`dbeZm>ScR1fVN]m<o70
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vmain_vlg_vec_tst
+!i10b 1
+Z25 !s100 MQXcQ0:3kD0__c59lWc>:0
+Z26 IH]GhO=_Ai^CT9Nmh>;j]J2
+Z27 VHZma`Q?n[z_A]1=F?<UDB3
+R4
+R16
+R17
+R18
+Z28 L0 3594
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vRF
+Z29 I`AGAe4PemYF=j]`^3Ugld3
+Z30 VZjGo[S]f1lbObb:MZCc>I2
+Z31 dC:\VHDL\TablaMendelF (DepurandoF)\RFPrueba\simulation\qsim
+Z32 w1543009024
+Z33 8RF.vo
+Z34 FRF.vo
+L0 31
+R8
+r1
+31
+Z35 !s90 -work|work|RF.vo|
+R10
+n@r@f
+Z36 !s100 dHoRRj0TJD<[mA0_NSP1D3
+Z37 !s108 1543009025.795000
+Z38 !s107 RF.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vRF_vlg_check_tst
+Z39 Ib1`z<7T9ic3F5HHFYa=]F1
+Z40 VmVe`8_d[kW4;glF74N_=@3
+R31
+Z41 w1543009023
+Z42 8RF.vt
+Z43 FRF.vt
+L0 65
+R8
+r1
+31
+Z44 !s108 1543009026.002000
+Z45 !s107 RF.vt|
+Z46 !s90 -work|work|RF.vt|
+R10
+Z47 n@r@f_vlg_check_tst
+Z48 !s100 QYzXPLRjeM>9_=im4:g>D2
+!i10b 1
+!s85 0
+!s101 -O0
+vRF_vlg_sample_tst
+Z49 !s100 `iNdJKFnbIEg7l9[V:ga]0
+Z50 I<>Tdf0I:;G6079g`EXV0=0
+Z51 V_35CcLG=Dig_3RdW_VL<P0
+R31
+R41
+R42
+R43
+L0 29
+R8
+r1
+31
+R44
+R45
+R46
+R10
+Z52 n@r@f_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vRF_vlg_vec_tst
+Z53 I]4S6Fnc>X:WVRoGL43Qm30
+Z54 VTmom22HjoDPXWNe?V6IYP3
+R31
+R41
+R42
+R43
+Z55 L0 473
+R8
+r1
+31
+R44
+R45
+R46
+R10
+Z56 n@r@f_vlg_vec_tst
+Z57 !s100 F0IKmn@2;eVckSV1L1[U70
+!i10b 1
+!s85 0
+!s101 -O0

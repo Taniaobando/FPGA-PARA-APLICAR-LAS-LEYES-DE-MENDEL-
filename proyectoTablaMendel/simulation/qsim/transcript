@@ -1,0 +1,318 @@
+# do proyecto.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main
+# 
+# Top level modules:
+# 	main
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main_vlg_sample_tst
+# -- Compiling module main_vlg_check_tst
+# -- Compiling module main_vlg_vec_tst
+# 
+# Top level modules:
+# 	main_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.main_vlg_vec_tst 
+# Loading work.main_vlg_vec_tst
+# Loading work.main
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading work.main_vlg_sample_tst
+# Loading work.main_vlg_check_tst
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# ERROR! Vector Mismatch for output port cajaB[0] :: @time = 1000000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port dataOutB[0] :: @time = 1000000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port dirRd[0] :: @time = 1000000.000 ps
+#      Expected value = 00000
+#      Real value = 00011
+# ERROR! Vector Mismatch for output port dirRd[1] :: @time = 1000000.000 ps
+#      Expected value = 00000
+#      Real value = 00011
+# ERROR! Vector Mismatch for output port dirRs[0] :: @time = 1000000.000 ps
+#      Expected value = 00000
+#      Real value = 00001
+# ERROR! Vector Mismatch for output port estadoActualSist[0] :: @time = 1000000.000 ps
+#      Expected value = 0000
+#      Real value = 0111
+# ERROR! Vector Mismatch for output port estadoActualSist[1] :: @time = 1000000.000 ps
+#      Expected value = 0000
+#      Real value = 0111
+# ERROR! Vector Mismatch for output port estadoActualSist[2] :: @time = 1000000.000 ps
+#      Expected value = 0000
+#      Real value = 0111
+# ERROR! Vector Mismatch for output port salidaAluOut[0] :: @time = 1000000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port salidaRom[0] :: @time = 1000000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1100000000000000000001
+# ERROR! Vector Mismatch for output port salidaRom[20] :: @time = 1000000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1100000000000000000001
+# ERROR! Vector Mismatch for output port salidaRom[21] :: @time = 1000000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1100000000000000000001
+# ERROR! Vector Mismatch for output port seg1[0] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1111011
+# ERROR! Vector Mismatch for output port seg1[1] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1111011
+# ERROR! Vector Mismatch for output port seg1[3] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1111011
+# ERROR! Vector Mismatch for output port seg1[4] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1111011
+# ERROR! Vector Mismatch for output port seg1[5] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1111011
+# ERROR! Vector Mismatch for output port seg1[6] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1111011
+# ERROR! Vector Mismatch for output port seg2[0] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg2[1] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg2[2] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg2[4] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg2[5] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg2[6] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg3[0] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg3[1] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg3[2] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg3[4] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg3[5] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port seg3[6] :: @time = 1000000.000 ps
+#      Expected value = 0000000
+#      Real value = 1110111
+# ERROR! Vector Mismatch for output port salidaMultiplexorReg[0] :: @time = 1010000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port salidaRam[0] :: @time = 1010000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port SignalLedNo :: @time = 1010000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port dirRam[0] :: @time = 1020000.000 ps
+#      Expected value = 0000
+#      Real value = 0001
+# ERROR! Vector Mismatch for output port estadoActualSist[3] :: @time = 1020000.000 ps
+#      Expected value = 0000
+#      Real value = 1000
+# ERROR! Vector Mismatch for output port ResultadoAlu[0] :: @time = 1020000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port salidaMultiplexorB[0] :: @time = 1020000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port inmediato[0] :: @time = 1100000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000001
+# ERROR! Vector Mismatch for output port salidaRom[9] :: @time = 1120000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0110010000001000000001
+# ERROR! Vector Mismatch for output port salidaRom[16] :: @time = 1120000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0110010000001000000001
+# ERROR! Vector Mismatch for output port salidaRom[19] :: @time = 1120000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0110010000001000000001
+# ERROR! Vector Mismatch for output port SignalLedWaitIn :: @time = 1120000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port datoInRam[0] :: @time = 1140000.000 ps
+#      Expected value = 0000000
+#      Real value = 0000001
+# ERROR! Vector Mismatch for output port signalLedIn :: @time = 1140000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port SignalLedSi :: @time = 1150000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port dirRd[2] :: @time = 1200000.000 ps
+#      Expected value = 00000
+#      Real value = 00100
+# ERROR! Vector Mismatch for output port salidaRom[1] :: @time = 1220000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1100000000000000000010
+# ERROR! Vector Mismatch for output port inmediato[1] :: @time = 1320000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000010
+# ERROR! Vector Mismatch for output port salidaRom[14] :: @time = 1340000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0110010100001000000010
+# ERROR! Vector Mismatch for output port dirRam[1] :: @time = 1360000.000 ps
+#      Expected value = 0000
+#      Real value = 0010
+# ERROR! Vector Mismatch for output port ResultadoAlu[1] :: @time = 1360000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000010
+# ERROR! Vector Mismatch for output port salidaMultiplexorB[1] :: @time = 1360000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000010
+# ERROR! Vector Mismatch for output port dataOutB[1] :: @time = 1420000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000011
+# ERROR! Vector Mismatch for output port cajaB[1] :: @time = 1440000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000011
+# ERROR! Vector Mismatch for output port salidaRom[15] :: @time = 1560000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0110011000001000000011
+# ERROR! Vector Mismatch for output port salidaRom[2] :: @time = 1660000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1100000000000000000100
+# ERROR! Vector Mismatch for output port inmediato[2] :: @time = 1760000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000100
+# ERROR! Vector Mismatch for output port dirRam[2] :: @time = 1800000.000 ps
+#      Expected value = 0000
+#      Real value = 0100
+# ERROR! Vector Mismatch for output port ResultadoAlu[2] :: @time = 1800000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000100
+# ERROR! Vector Mismatch for output port salidaMultiplexorB[2] :: @time = 1800000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000100
+# ERROR! Vector Mismatch for output port salidaRom[17] :: @time = 2000000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0110100000001000000101
+# ERROR! Vector Mismatch for output port dirRd[3] :: @time = 2080000.000 ps
+#      Expected value = 00000
+#      Real value = 01000
+# ERROR! Vector Mismatch for output port salidaRom[3] :: @time = 2760000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0000110100000000001000
+# ERROR! Vector Mismatch for output port salidaAluOut[2] :: @time = 2770000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port salidaMultiplexorReg[2] :: @time = 2780000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port dataOutB[2] :: @time = 2790000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port cajaB[2] :: @time = 2800000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port inmediato[3] :: @time = 2840000.000 ps
+#      Expected value = 000000000
+#      Real value = 000001000
+# ERROR! Vector Mismatch for output port dirRam[3] :: @time = 2860000.000 ps
+#      Expected value = 0000
+#      Real value = 1000
+# ERROR! Vector Mismatch for output port ResultadoAlu[3] :: @time = 2860000.000 ps
+#      Expected value = 000000000
+#      Real value = 000001000
+# ERROR! Vector Mismatch for output port salidaMultiplexorB[3] :: @time = 2860000.000 ps
+#      Expected value = 000000000
+#      Real value = 000001000
+# ERROR! Vector Mismatch for output port salidaRom[18] :: @time = 2860000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0001011000000000000011
+# ERROR! Vector Mismatch for output port salidaAluOut[3] :: @time = 2870000.000 ps
+#      Expected value = 000000000
+#      Real value = 000001000
+# ERROR! Vector Mismatch for output port salidaMultiplexorReg[3] :: @time = 2880000.000 ps
+#      Expected value = 000000000
+#      Real value = 000001000
+# ERROR! Vector Mismatch for output port dataOutB[3] :: @time = 2890000.000 ps
+#      Expected value = 000000000
+#      Real value = 000001000
+# ERROR! Vector Mismatch for output port cajaB[3] :: @time = 2900000.000 ps
+#      Expected value = 000000000
+#      Real value = 000001000
+# ERROR! Vector Mismatch for output port dirRd[4] :: @time = 2940000.000 ps
+#      Expected value = 00000
+#      Real value = 10110
+# ERROR! Vector Mismatch for output port salidaAluOut[1] :: @time = 2970000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000011
+# ERROR! Vector Mismatch for output port salidaMultiplexorReg[1] :: @time = 2980000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000011
+# ERROR! Vector Mismatch for output port salidaRom[4] :: @time = 3460000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1000101101100100011000
+# ERROR! Vector Mismatch for output port salidaRom[8] :: @time = 3460000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1000101101100100011000
+# ERROR! Vector Mismatch for output port salidaRom[11] :: @time = 3460000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1000101101100100011000
+# ERROR! Vector Mismatch for output port salidaRom[12] :: @time = 3460000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 1000101101100100011000
+# ERROR! Vector Mismatch for output port dataOutA[0] :: @time = 3540000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port dataOutA[2] :: @time = 3540000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port dirRs[2] :: @time = 3540000.000 ps
+#      Expected value = 00000
+#      Real value = 01100
+# ERROR! Vector Mismatch for output port dirRs[3] :: @time = 3540000.000 ps
+#      Expected value = 00000
+#      Real value = 01100
+# ERROR! Vector Mismatch for output port inmediato[4] :: @time = 3540000.000 ps
+#      Expected value = 000000000
+#      Real value = 100011000
+# ERROR! Vector Mismatch for output port inmediato[8] :: @time = 3540000.000 ps
+#      Expected value = 000000000
+#      Real value = 100011000
+# ERROR! Vector Mismatch for output port cajaA[0] :: @time = 3560000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port cajaA[2] :: @time = 3560000.000 ps
+#      Expected value = 000000000
+#      Real value = 000000101
+# ERROR! Vector Mismatch for output port signalLedOut :: @time = 3680000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port salidaRom[10] :: @time = 27320000.000 ps
+#      Expected value = 0000000000000000000000
+#      Real value = 0001100100011000000000
+# ERROR! Vector Mismatch for output port dirRs[1] :: @time = 27400000.000 ps
+#      Expected value = 00000
+#      Real value = 00011
+# ERROR! Vector Mismatch for output port datoInRam[1] :: @time = 27680000.000 ps
+#      Expected value = 0000000
+#      Real value = 0000011
+#          95 mismatched vectors : Simulation failed !
+# ** Note: $finish    : proyecto.vt(3590)
+#    Time: 50 us  Iteration: 0  Instance: /main_vlg_vec_tst/tb_out
